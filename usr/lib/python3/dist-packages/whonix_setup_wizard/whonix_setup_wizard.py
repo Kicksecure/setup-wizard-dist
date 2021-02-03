@@ -153,7 +153,7 @@ class WhonixSetupWizard(QtWidgets.QWizard):
     def __init__(self):
         super(WhonixSetupWizard, self).__init__()
 
-        translation = _translations(Common.translations_path, 'whonixsetup')
+        translation = _translations(Common.translations_path, 'setup-dist')
         self._ = translation.gettext
 
         self.steps = Common.wizard_steps

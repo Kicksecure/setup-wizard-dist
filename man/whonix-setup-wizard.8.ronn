@@ -12,7 +12,7 @@ setup-dist-wizard(8) -- Whonix Settings Wizard
 
 ## DESCRIPTION
 
-Graphical version of `whonixsetup`, that asks in which environment you are
+Graphical version of `setup-dist`, that asks in which environment you are
 using Whonix, informs about various situations, helps to enable Tor in
 Tor config.
 
@@ -24,7 +24,7 @@ Tor config.
 
 ## SKIP FILES
 
-See also `man whonixsetup` for skip files.
+See also `man setup-dist` for skip files.
 
 ## WWW
 

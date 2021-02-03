@@ -2,7 +2,7 @@
 
 When Whonix starts for the first time, it won't automatically connect to the
 public Tor network. This is useful for users who want to hide Tor from their
-ISP. whonixsetup is automatically started, which educates about different
+ISP. setup-dist is automatically started, which educates about different
 methods to connect (public Tor network, bridges, etc.).
 
 Also automatically starts the Whonix Repository Tool (if installed), so the
