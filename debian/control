@@ -13,13 +13,13 @@ Standards-Version: 4.3.0
 
 Package: whonix-setup-wizard
 Architecture: all
-Depends: whonixsetup, python3-yaml, whonix-repository,
+Depends: setup-dist, python3-yaml, whonix-repository,
  helper-scripts, python3, x11-xserver-utils, ${misc:Depends}
 Recommends: anon-icon-pack
 Description: First Time Connection Setup
  When Whonix starts for the first time, it won't automatically connect to the
  public Tor network. This is useful for users who want to hide Tor from their
- ISP. whonixsetup is automatically started, which educates about different
+ ISP. setup-dist is automatically started, which educates about different
  methods to connect (public Tor network, bridges, etc.).
  .
  Also automatically starts the Whonix Repository Tool (if installed), so the
