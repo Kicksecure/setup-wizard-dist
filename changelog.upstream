@@ -1,3 +1,102 @@
+commit 88984b10a217069fc106e08098a69a819c585c6c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:53:47 2021 -0500
+
+    readme
+
+commit 345f66ef7a61b4c52f3ce9083a43d7cc57fdc3e9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:43:13 2021 -0500
+
+    whonix-setup-wizard -> setup-wizard-dist
+
+commit 053c5ba4ac89d5f42bba04137fbd449bbac1205d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:29:45 2021 -0500
+
+    remove legacy files
+    
+    rm_conffile /etc/sudoers.d/whonix-setup-wizard
+    rm_conffile /etc/xdg/autostart/whonix-setup-wizard.desktop
+
+commit 464e1341179777ffd57b747803f0ec4d448022a7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:28:24 2021 -0500
+
+    whonix-setup-wizard -> setup-wizard-dist
+
+commit e7b2e6572d1de66b9b043b008fc7ee79f28acdf7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:23:39 2021 -0500
+
+    rename man page
+
+commit 5909d0950907655bf59d297e0a09c59606aae356
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:22:51 2021 -0500
+
+    setup-wizard-dist
+
+commit 57bac24051416b6a044f9c286f020041c77613a4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:22:41 2021 -0500
+
+    move
+
+commit 2b0b601f9ebc801824a6f2689b21b5390a49e52b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:18:58 2021 -0500
+
+    update path
+
+commit a740b25e6c0cb0052657338ad7cbcb18897c7168
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:18:30 2021 -0500
+
+    output
+
+commit 1fded3130500097802dfc8ff3500bec989b306dd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:17:25 2021 -0500
+
+    output
+
+commit b91d667693d34d1b087279fc8fa927aa53559dae
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:16:23 2021 -0500
+
+    whonixsetup > setup-dist
+
+commit f2bc279316d3d9447d50fe18ab6c28237f175094
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:13:13 2021 -0500
+
+    whonix-setup-wizard -> setup-wizard-dist
+
+commit 3b2a22608829b040284e5ac6512e309cd3d81921
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:04:07 2021 -0500
+
+    repository-dist
+
+commit ce2fffba151dd14e578f1675060e4f07f828c050
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:03:42 2021 -0500
+
+    setup-dist
+
+commit 64eb8acea370b7188466c99d481f53a30230b284
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 08:40:43 2021 -0500
+
+    whonixsetup -> setup-dist
+
+commit 8c378244fbcc39a4e6287f34fdadfeb006dc8c5d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 26 09:58:12 2021 -0500
+
+    bumped changelog version
+
 commit 612e947a7b58475949d155bf3095386f25b8fb2c
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 26 09:58:11 2021 -0500
