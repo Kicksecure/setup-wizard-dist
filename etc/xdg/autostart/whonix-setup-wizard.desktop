@@ -2,8 +2,8 @@
 ## See the file COPYING for copying conditions.
 
 [Desktop Entry]
-Name=Whonix Setup Wizard
+Name=Distribution Setup Wizard
 Comment=First Boot Setup Graphical User Interface
 Type=Application
 Terminal=false
-Exec=/usr/lib/setup-dist-wizard/setup-dist_check_for_start
+Exec=/usr/lib/setup-wizard-dist/setup-dist_check_for_start
