@@ -11,7 +11,7 @@ import shutil
 
 
 def whonix_setup_wizard_start():
-   command = '/usr/lib/setup-wizard-dist/whonix-setup-wizard-setup'
+   command = '/usr/lib/setup-wizard-dist/setup-wizard-dist'
    call(command, shell=True)
 
 
