@@ -23,11 +23,20 @@ if os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip'
    print('/usr/lib/whonix-setup-wizard/whonixsetup_check_for_start: /usr/share/whonix-setup-wizard/status-files/whonixsetup.skip exists. Exiting.')
    sys.exit()
 
+if os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip'):
+   print('/usr/lib/whonix-setup-wizard/whonixsetup_check_for_start: /usr/share/setup-dist/status-files/setup-dist.skip exists. Exiting.')
+   sys.exit()
+
 if os.path.exists('/usr/share/anon-ws-base-files/workstation'):
    if os.path.exists('/usr/share/whonix-setup-wizard/status-files/first_use_check.skip'):
       ## Qubes-Whonix only.
       ## Do not start Whonix Setup Wizard in Qubes-Whonix-Workstation by default.
       print('/usr/lib/whonix-setup-wizard/whonixsetup_check_for_start: workstation detected and /usr/share/whonix-setup-wizard/status-files/first_use_check.skip exists. Exiting.')
+      sys.exit()
+   if os.path.exists('/usr/share/setup-dist/status-files/first_use_check.skip'):
+      ## Qubes-Whonix only.
+      ## Do not start Whonix Setup Wizard in Qubes-Whonix-Workstation by default.
+      print('/usr/lib/whonix-setup-wizard/whonixsetup_check_for_start: workstation detected and /usr/share/setup-dist/status-files/first_use_check.skip exists. Exiting.')
       sys.exit()
 
 if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
@@ -70,8 +79,12 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
 
 elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
 
-    if (os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
-                               os.path.exists('/var/lib/whonix/do_once/whonixsetup.done')):
+    if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
+                               os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
+                               os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
+                               os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done') or
+                               os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
+                      ):
        print('/usr/lib/whonix-setup-wizard/whonixsetup_check_for_start: whonix-setup-wizard done file exists. Exiting.')
        sys.exit()
 

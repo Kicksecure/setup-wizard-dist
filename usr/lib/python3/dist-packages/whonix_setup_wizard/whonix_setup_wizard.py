@@ -13,6 +13,7 @@ from subprocess import call
 import os, yaml
 import inspect
 import sys
+import pathlib
 
 from guimessages.translations import _translations
 from guimessages.guimessage import gui_message
@@ -34,18 +35,24 @@ class Common:
     else:
         print("Whonix-Setup-Wizard cannot decide environment: marker file in /usr/share/anon-ws-base-files/workstation is missing.")
 
-    if not os.path.exists('/var/cache/whonix-setup-wizard/status-files'):
-        os.mkdir('/var/cache/whonix-setup-wizard/status-files')
+    if not os.path.exists('/var/cache/setup-dist/status-files'):
+        pathlib.Path("/var/cache/setup-dist/status-files").mkdir(parents=True, exist_ok=True)
 
     show_disclaimer = (not os.path.exists('/var/cache/whonix-setup-wizard/status-files/disclaimer.done') and
-                       not os.path.exists('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'))
+                       not os.path.exists('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip') and
+                       not os.path.exists('/var/cache/setup-dist/status-files/disclaimer.done') and
+                       not os.path.exists('/usr/share/setup-dist/status-files/disclaimer.skip')
+                      )
 
     if(show_disclaimer):
         wizard_steps.append('disclaimer_1')
         wizard_steps.append('disclaimer_2')
 
     show_finish_page = (not os.path.exists('/var/cache/whonix-setup-wizard/status-files/finish_page.done') and
-                       not os.path.exists('/usr/share/whonix-setup-wizard/status-files/finish_page.skip'))
+                       not os.path.exists('/usr/share/whonix-setup-wizard/status-files/finish_page.skip') and
+                       not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
+                       not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip')
+                       )
 
     if(show_finish_page):
         wizard_steps.append('finish_page')
@@ -257,7 +264,7 @@ class WhonixSetupWizard(QtWidgets.QWizard):
                   call(command, shell=True)
                   sys.exit()
 
-               f = open('/var/cache/whonix-setup-wizard/status-files/disclaimer.done', 'w')
+               f = open('/var/cache/setup-dist/status-files/disclaimer.done', 'w')
                f.close()
 
             if self.env == 'workstation':
@@ -284,10 +291,17 @@ def main():
       wizard = WhonixSetupWizard()
 
    if Common.show_disclaimer:
-      if not os.path.isfile('/var/cache/whonix-setup-wizard/status-files/disclaimer.done'):
-         command = '/sbin/poweroff'
-         call(command, shell=True)
-         sys.exit()
+      if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
+         return
+      if os.path.isfile('/var/cache/whonix-setup-wizard/status-files/disclaimer.done'):
+         return
+      if os.path.isfile('/usr/share/setup-dist/status-files/disclaimer.skip'):
+         return
+      if os.path.isfile('/var/cache/setup-dist/status-files/disclaimer.done'):
+         return
+      command = '/sbin/poweroff'
+      call(command, shell=True)
+      sys.exit()
 
    if Common.environment == 'gateway':
       '''
@@ -298,11 +312,11 @@ def main():
       from anon_connection_wizard import anon_connection_wizard
       anon_connection_wizard = anon_connection_wizard.main()
 
-   if not os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done'):
-      f = open('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done', 'w')
+   if not os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done'):
+      f = open('/var/cache/setup-dist/status-files/setup-dist.done', 'w')
       f.close()
 
-   command = '/usr/lib/whonixsetup_/ft_m_end'
+   command = '/usr/lib/setup-dist/ft_m_end'
    call(command, shell=True)
 
 
