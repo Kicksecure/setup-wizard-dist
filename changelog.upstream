@@ -1,3 +1,15 @@
+commit 8511522b14c8165c63d74a0ba40813bfb1eb50c2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:54:43 2021 -0500
+
+    genmkfile debinstfile
+
+commit d61f206f5da83748dcceb7e8f53ba155b36a32f0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 3 11:53:47 2021 -0500
+
+    bumped changelog version
+
 commit 88984b10a217069fc106e08098a69a819c585c6c
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 3 11:53:47 2021 -0500
