@@ -6,4 +6,4 @@ Name=Whonix Setup Wizard
 Comment=First Boot Setup Graphical User Interface
 Type=Application
 Terminal=false
-Exec=/usr/lib/whonix-setup-wizard/whonixsetup_check_for_start
+Exec=/usr/lib/setup-dist-wizard/whonixsetup_check_for_start

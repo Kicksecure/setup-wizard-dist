@@ -1,4 +1,4 @@
-whonix-setup-wizard(8) -- Whonix Settings Wizard
+setup-dist-wizard(8) -- Whonix Settings Wizard
 =============================================
 
 <span class="comment">
@@ -8,7 +8,7 @@ whonix-setup-wizard(8) -- Whonix Settings Wizard
 
 ## SYNOPSIS
 
-`whonix-setup-wizard` {setup,locale_settings}
+`setup-dist-wizard` {setup,locale_settings}
 
 ## DESCRIPTION
 
@@ -18,9 +18,9 @@ Tor config.
 
 ## EXAMPLES
 
-`whonix-setup-wizard setup`
+`setup-dist-wizard setup`
 
-`whonix-setup-wizard locale_settings`
+`setup-dist-wizard locale_settings`
 
 ## SKIP FILES
 
