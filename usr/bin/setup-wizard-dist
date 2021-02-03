@@ -4,8 +4,8 @@
 ## Copyright (C) 2014 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
 ## See the file COPYING for copying conditions.
 
-from whonix_setup_wizard import whonix_setup_wizard
+from setup_wizard_dist import setup_wizard_dist
 import signal
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
-whonix_setup_wizard.main()
+setup_wizard_dist.main()

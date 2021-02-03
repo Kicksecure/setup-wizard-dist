@@ -1,4 +1,4 @@
-setup-dist-wizard(8) -- Whonix Settings Wizard
+setup-dist-wizard(8) -- Graphical Settings Wizard
 =============================================
 
 <span class="comment">
@@ -13,7 +13,7 @@ setup-dist-wizard(8) -- Whonix Settings Wizard
 ## DESCRIPTION
 
 Graphical version of `setup-dist`, that asks in which environment you are
-using Whonix, informs about various situations, helps to enable Tor in
+using, informs about various situations, helps to enable Tor in
 Tor config.
 
 ## EXAMPLES

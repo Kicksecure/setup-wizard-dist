@@ -10,7 +10,7 @@ import time
 import shutil
 
 
-def whonix_setup_wizard_start():
+def setup_wizard_dist_start():
    command = '/usr/lib/setup-wizard-dist/setup-wizard-dist'
    call(command, shell=True)
 
@@ -57,7 +57,7 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
     #if tor_status_code != 0:
        #print('usr/lib/setup-wizard-dist/setup-dist_check_for_start Starting whonix-setup-wizard because Tor systemd unit is not running. \
 #This could be because of a Tor configuration issue.')
-       #whonix_setup_wizard_start()
+       #setup_wizard_dist_start()
        #sys.exit()
 
     ## We cannot depend on anon-connection-wizard because it would be confusing to have
@@ -74,7 +74,7 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
 
     print(tor_status)
 
-    whonix_setup_wizard_start()
+    setup_wizard_dist_start()
 
 
 elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
@@ -88,7 +88,7 @@ elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
        print('usr/lib/setup-wizard-dist/setup-dist_check_for_start whonix-setup-wizard done file exists. Exiting.')
        sys.exit()
 
-    whonix_setup_wizard_start()
+    setup_wizard_dist_start()
 
 
 else:

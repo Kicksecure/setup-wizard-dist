@@ -25,7 +25,7 @@ class Common:
     '''
     Variables and constants used through all the classes
     '''
-    translations_path ='/usr/share/translations/whonix_setup.yaml'
+    translations_path ='/usr/share/translations/setup-wizard-dist.yaml'
     wizard_steps = []
 
     if os.path.isfile('/usr/share/anon-gw-base-files/gateway'):
