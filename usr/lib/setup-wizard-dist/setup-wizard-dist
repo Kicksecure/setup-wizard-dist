@@ -5,4 +5,4 @@
 
 set -x
 
-sudo --non-interactive --set-home /usr/bin/setup-dist-wizard
+sudo --non-interactive --set-home /usr/bin/setup-wizard-dist

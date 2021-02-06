@@ -1,4 +1,4 @@
-setup-dist-wizard(8) -- Graphical Settings Wizard
+setup-wizard-dist(8) -- Graphical Settings Wizard
 =============================================
 
 <span class="comment">
@@ -8,7 +8,7 @@ setup-dist-wizard(8) -- Graphical Settings Wizard
 
 ## SYNOPSIS
 
-`setup-dist-wizard` {setup,locale_settings}
+`setup-wizard-dist` {setup,locale_settings}
 
 ## DESCRIPTION
 
@@ -18,9 +18,9 @@ Tor config.
 
 ## EXAMPLES
 
-`setup-dist-wizard setup`
+`setup-wizard-dist setup`
 
-`setup-dist-wizard locale_settings`
+`setup-wizard-dist locale_settings`
 
 ## SKIP FILES
 
