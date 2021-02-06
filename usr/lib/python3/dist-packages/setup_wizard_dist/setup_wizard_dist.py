@@ -149,9 +149,9 @@ class FinishPage(QtWidgets.QWizardPage):
         self.setLayout(self.layout)
 
 
-class WhonixSetupWizard(QtWidgets.QWizard):
+class setup_wizard_dist(QtWidgets.QWizard):
     def __init__(self):
-        super(WhonixSetupWizard, self).__init__()
+        super(setup_wizard_dist, self).__init__()
 
         translation = _translations(Common.translations_path, 'setup-dist')
         self._ = translation.gettext
@@ -288,7 +288,7 @@ def main():
    if len(Common.wizard_steps) == 0:
       print('INFO: No page needs showing.')
    else:
-      wizard = WhonixSetupWizard()
+      wizard = setup_wizard_dist()
 
    if Common.show_disclaimer:
       if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
