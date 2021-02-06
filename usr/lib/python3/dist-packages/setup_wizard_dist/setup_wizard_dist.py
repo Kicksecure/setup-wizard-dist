@@ -282,6 +282,12 @@ class setup_wizard_dist(QtWidgets.QWizard):
 
 
 def main():
+   import sys
+
+   if os.getuid() != 0:
+      print('ERROR: This must be run as root!\nUse "sudo --set-home".')
+      sys.exit(1)
+
    app = QtWidgets.QApplication(sys.argv)
 
    # when there is no page need showing, we simply do not start GUI to
