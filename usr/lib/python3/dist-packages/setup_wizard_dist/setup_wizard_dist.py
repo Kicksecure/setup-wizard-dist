@@ -33,6 +33,7 @@ class Common:
     elif os.path.isfile('/usr/share/anon-ws-base-files/workstation'):
         environment = 'workstation'
     else:
+        environment = 'machine'
         print("Whonix-Setup-Wizard cannot decide environment: marker file in /usr/share/anon-ws-base-files/workstation is missing.")
 
     if not os.path.exists('/var/cache/setup-dist/status-files'):
