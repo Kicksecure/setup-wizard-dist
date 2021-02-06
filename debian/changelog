@@ -1,3 +1,9 @@
+setup-wizard-dist (3:6.6-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 06 Feb 2021 11:00:11 +0000
+
 setup-wizard-dist (3:6.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
