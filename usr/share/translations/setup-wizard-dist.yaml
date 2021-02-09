@@ -59,7 +59,7 @@ setup-dist:
         reject: Not understood / Nicht verstanden
 
         finish_page:
-            <p>Whonix Setup is completed.</p>
+            <p>setup-wizard-dist is completed.</p>
             <p>Click "Finish" to run systemcheck.</p>
 
         first_use_notice:
