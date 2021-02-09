@@ -174,7 +174,11 @@ class setup_wizard_dist(QtWidgets.QWizard):
 
     def setupUi(self):
       self.setWindowIcon(QtGui.QIcon("/usr/share/icons/anon-icon-pack/whonix.ico"))
-      self.setWindowTitle('Whonix Setup Wizard')
+
+      if Common.environment == 'machine':
+         self.setWindowTitle('Kicksecure Setup Wizard')
+      else:
+         self.setWindowTitle('Whonix Setup Wizard')
 
       available_height = QtWidgets.QDesktopWidget().availableGeometry().height() - 60
       self.disclaimer_height = 750

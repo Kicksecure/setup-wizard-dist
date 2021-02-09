@@ -30,12 +30,12 @@ if os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip'):
 if os.path.exists('/usr/share/anon-ws-base-files/workstation'):
    if os.path.exists('/usr/share/whonix-setup-wizard/status-files/first_use_check.skip'):
       ## Qubes-Whonix only.
-      ## Do not start Whonix Setup Wizard in Qubes-Whonix-Workstation by default.
+      ## Do not start setup-wizard-dist in Qubes-Whonix-Workstation by default.
       print('usr/lib/setup-wizard-dist/setup-dist_check_for_start workstation detected and /usr/share/whonix-setup-wizard/status-files/first_use_check.skip exists. Exiting.')
       sys.exit()
    if os.path.exists('/usr/share/setup-dist/status-files/first_use_check.skip'):
       ## Qubes-Whonix only.
-      ## Do not start Whonix Setup Wizard in Qubes-Whonix-Workstation by default.
+      ## Do not start setup-wizard-dist in Qubes-Whonix-Workstation by default.
       print('usr/lib/setup-wizard-dist/setup-dist_check_for_start workstation detected and /usr/share/setup-dist/status-files/first_use_check.skip exists. Exiting.')
       sys.exit()
 
