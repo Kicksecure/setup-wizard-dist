@@ -18,13 +18,13 @@ setup-dist:
         disclaimer_3:
             <p>This OS is a compilation of software packages, each under its own copyright and license. The exact license terms for each program are described in the individual files in /usr/share/doc/*/copyright.</p>
 
-        disclaimer_3_kicksecure:
+        disclaimer_4_kicksecure:
             <p>The compilation is made available the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version with additional terms applicable per GNU GPL version 3 section 7. The license can be refereed to as GPL-3+-with-additional-terms-1 and can be found in /usr/share/kicksecure/KICKSECURE_BINARY_LICENSE_AGREEMENT or online here <a href=https://www.kicksecure.com/wiki/Kicksecure:Copyrights>https://www.kicksecure.com/wiki/Kicksecure:Copyrights</a></p>
 
-        disclaimer_3_whonix:
+        disclaimer_4_whonix:
             <p>The compilation is made available the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version with additional terms applicable per GNU GPL version 3 section 7. The license can be refereed to as GPL-3+-with-additional-terms-1 and can be found in /usr/share/whonix/WHONIX_BINARY_LICENSE_AGREEMENT or online here <a href=https://www.whonix.org/wiki/Whonix:Copyrights>https://www.whonix.org/wiki/Whonix:Copyrights</a></p>
 
-        disclaimer_2:
+        disclaimer_page_two:
             <p><b>Important Information About This Operating System (OS) Part 2/2</b></p>
             <p>DISCLAIMER OF WARRANTY.<br />
             .<br />

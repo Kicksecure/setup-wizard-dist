@@ -204,12 +204,27 @@ class setup_wizard_dist(QtWidgets.QWizard):
       self.finish_page.icon.setPixmap(QtGui.QPixmap('/usr/share/icons/oxygen/48x48/status/task-complete.png'))
       self.finish_page.text.setText(self._('finish_page'))
 
+      disclaimer_message = ""
+      disclaimer_message += self._('disclaimer_1')
+
+      if Common.environment == 'machine':
+         disclaimer_message += self._('disclaimer_2_kicksecure')
+      else:
+         disclaimer_message += self._('disclaimer_2_whonix')
+
+      disclaimer_message += self._('disclaimer_3')
+
+      if Common.environment == 'machine':
+         disclaimer_message += self._('disclaimer_4_kicksecure')
+      else:
+         disclaimer_message += self._('disclaimer_4_whonix')
+
       if Common.show_disclaimer:
-         self.disclaimer_1.text.setText(self._('disclaimer_1'))
+         self.disclaimer_1.text.setText(disclaimer_message)
          self.disclaimer_1.yes_button.setText(self._('accept'))
          self.disclaimer_1.no_button.setText(self._('reject'))
 
-         self.disclaimer_2.text.setText(self._('disclaimer_2'))
+         self.disclaimer_2.text.setText(self._('disclaimer_page_two'))
          self.disclaimer_2.yes_button.setText(self._('accept'))
          self.disclaimer_2.no_button.setText(self._('reject'))
 
