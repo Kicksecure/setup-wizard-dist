@@ -7,9 +7,12 @@ setup-dist:
         disclaimer_1:
             <p><b>Important Information About This Operating System (OS) Part 1/2</b></p>
             <p>Please do NOT continue unless you understand everything!</p>
-            <p>This is not the usual blah blah blah but fact. Whonix is a research project. Whonix is free of charge. Whonix is a derivative of Debian GNU/Linux. Whonix is produced independently of, with no guarantee from, The Tor Project. Whonix is created by volunteers in their spare time. Whonix was created by self-taught hobbyists in their spare time, without the backing of any particular formal certification or training. Although Whonix attempts to be as usable as possible, there are many ways in which it fails. Whonix is in English. Do not use Whonix without excellent knowledge of the English language. Misunderstandings have consequences. Whonix is based on other software, including GNU/Linux, Debian, and virtualization. Do not rely on Whonix without working knowledge of these technologies.</p>
+            <p>This is not the usual blah blah blah but fact. This OS is a research project. This OS is free of charge. This OS is a derivative of Debian GNU/Linux. This OS is produced independently of, with no guarantee from, The Tor Project. This OS is created by volunteers in their spare time. This OS was created by self-taught hobbyists in their spare time, without the backing of any particular formal certification or training. Although This OS attempts to be as usable as possible, there are many ways in which it fails. This OS is in English. Do not use This OS without excellent knowledge of the English language. Misunderstandings have consequences. This OS is based on other software, including GNU/Linux, Debian, and virtualization. Do not rely on This OS without working knowledge of these technologies.</p>
+        disclaimer_2_whonix:
             <p>The documentation available on Whonix.org is a crash course in anonymity, privacy, and security on the Internet. Whonix is a technological means to anonymity, but staying anonymous is not just a technological problem. No tool is enough to keep you safe. Anonymity is a complex problem without an easy solution, and security is only as strong as its weakest link, often the user. The more you know, the safer you can be.</p>
-            <p>Whonix is a compilation of software packages, each under its own copyright and license. The exact license terms for each program are described in the individual files in /usr/share/doc/*/copyright.</p>
+        disclaimer_3:
+            <p>This OS is a compilation of software packages, each under its own copyright and license. The exact license terms for each program are described in the individual files in /usr/share/doc/*/copyright.</p>
+        disclaimer_3_whonix:
             <p>The compilation is made available the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version with additional terms applicable per GNU GPL version 3 section 7. The license can be refereed to as GPL-3+-with-additional-terms-1 and can be found in /usr/share/whonix/WHONIX_BINARY_LICENSE_AGREEMENT or online here <a href=https://www.whonix.org/wiki/Whonix:Copyrights>https://www.whonix.org/wiki/Whonix:Copyrights</a></p>
 
         disclaimer_2:
@@ -63,13 +66,13 @@ setup-dist:
             <p>Click "Finish" to run systemcheck.</p>
 
         first_use_notice:
-            <p>Welcome to Whonix-Gateway!<br />
+            <p>Welcome to This OS-Gateway!<br />
             <br />
-            This is NOT a personal work station for your own private activities! So please do NOT use Whonix-Gateway for any purpose other than configuring Tor and Whonix.<br />
+            This is NOT a personal work station for your own private activities! So please do NOT use This OS-Gateway for any purpose other than configuring Tor and This OS.<br />
             <br />
-            The more you learn about Whonix and anonymity, the safer you can become. Reading Whonix documentation is recommended.<br />
+            The more you learn about This OS and anonymity, the safer you can become. Reading This OS documentation is recommended.<br />
             <br />
-            If your host has little RAM, you are advised to reduce Whonix-Gateway RAM to 256 MB. No graphical desktop environment will be started in that case. A Whonix-Gateway without graphical desktop environment works as good as one with, but it is not as convenient. If you want, you can start a graphical desktop environment by toggling how much RAM is available to Whonix-Gateway.<br />
+            If your host has little RAM, you are advised to reduce This OS-Gateway RAM to 256 MB. No graphical desktop environment will be started in that case. A This OS-Gateway without graphical desktop environment works as good as one with, but it is not as convenient. If you want, you can start a graphical desktop environment by toggling how much RAM is available to This OS-Gateway.<br />
             <br />
             Documentation about this feature can be found in
             <a href=https://www.whonix.org/wiki/Desktop>https://www.whonix.org/wiki/Desktop</a>.<br />
