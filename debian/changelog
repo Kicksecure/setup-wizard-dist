@@ -2,397 +2,397 @@ setup-wizard-dist (3:6.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 10 Feb 2021 11:07:11 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 10 Feb 2021 11:07:11 +0000
 
 setup-wizard-dist (3:6.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 06 Feb 2021 11:00:11 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 06 Feb 2021 11:00:11 +0000
 
 setup-wizard-dist (3:6.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 06 Feb 2021 10:33:19 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 06 Feb 2021 10:33:19 +0000
 
 setup-wizard-dist (3:6.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 03 Feb 2021 16:55:16 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 03 Feb 2021 16:55:16 +0000
 
 setup-wizard-dist (3:6.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 03 Feb 2021 16:53:47 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 03 Feb 2021 16:53:47 +0000
 
 setup-wizard-dist (3:6.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 26 Jan 2021 14:58:12 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 26 Jan 2021 14:58:12 +0000
 
 setup-wizard-dist (3:6.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 03 Jun 2020 14:27:12 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 03 Jun 2020 14:27:12 +0000
 
 setup-wizard-dist (3:6.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 16 Apr 2020 12:54:47 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 16 Apr 2020 12:54:47 +0000
 
 setup-wizard-dist (3:5.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 02 Apr 2020 12:13:07 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 02 Apr 2020 12:13:07 +0000
 
 setup-wizard-dist (3:5.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 01 Apr 2020 15:17:01 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 01 Apr 2020 15:17:01 +0000
 
 setup-wizard-dist (3:5.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 30 Jan 2020 11:52:59 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 30 Jan 2020 11:52:59 +0000
 
 setup-wizard-dist (3:5.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 28 Aug 2019 12:55:26 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 28 Aug 2019 12:55:26 +0000
 
 setup-wizard-dist (3:5.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 01 Aug 2019 12:16:38 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 01 Aug 2019 12:16:38 +0000
 
 setup-wizard-dist (3:5.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 31 Jul 2019 07:51:52 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 31 Jul 2019 07:51:52 +0000
 
 setup-wizard-dist (3:5.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 15 Jul 2019 19:52:38 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 15 Jul 2019 19:52:38 +0000
 
 setup-wizard-dist (3:5.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 14 Jul 2019 07:25:07 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 14 Jul 2019 07:25:07 +0000
 
 setup-wizard-dist (3:5.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 30 Jun 2019 11:18:54 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 30 Jun 2019 11:18:54 +0000
 
 setup-wizard-dist (3:5.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 27 Jun 2019 07:29:21 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 27 Jun 2019 07:29:21 +0000
 
 setup-wizard-dist (3:4.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 23 Jun 2019 19:59:57 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 23 Jun 2019 19:59:57 +0000
 
 setup-wizard-dist (3:4.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 23 Jun 2019 12:22:50 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 23 Jun 2019 12:22:50 +0000
 
 setup-wizard-dist (3:4.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 08 Jun 2019 11:45:01 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 08 Jun 2019 11:45:01 +0000
 
 setup-wizard-dist (3:4.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 24 May 2019 21:08:02 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 24 May 2019 21:08:02 +0000
 
 setup-wizard-dist (3:4.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 12 May 2019 10:58:33 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 12 May 2019 10:58:33 +0000
 
 setup-wizard-dist (3:4.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 03 May 2019 11:47:14 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 03 May 2019 11:47:14 +0000
 
 setup-wizard-dist (3:4.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 10 Apr 2019 20:24:28 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 10 Apr 2019 20:24:28 +0000
 
 setup-wizard-dist (3:4.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 08 Apr 2019 13:09:41 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 08 Apr 2019 13:09:41 +0000
 
 setup-wizard-dist (3:4.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 06 Apr 2019 12:26:36 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 06 Apr 2019 12:26:36 +0000
 
 setup-wizard-dist (3:4.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 29 Mar 2019 10:17:08 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 29 Mar 2019 10:17:08 +0000
 
 setup-wizard-dist (3:3.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 13 Mar 2019 21:14:53 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 13 Mar 2019 21:14:53 +0000
 
 setup-wizard-dist (3:3.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 12 Mar 2019 11:50:40 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 12 Mar 2019 11:50:40 +0000
 
 setup-wizard-dist (3:3.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 13 Nov 2018 14:11:50 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 13 Nov 2018 14:11:50 +0000
 
 setup-wizard-dist (3:3.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 27 Aug 2018 17:07:49 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 27 Aug 2018 17:07:49 +0000
 
 setup-wizard-dist (3:3.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 09 Aug 2018 16:10:35 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 09 Aug 2018 16:10:35 +0000
 
 setup-wizard-dist (3:3.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 09 May 2018 12:32:28 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 09 May 2018 12:32:28 +0000
 
 setup-wizard-dist (3:3.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 18 Feb 2018 14:10:01 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 18 Feb 2018 14:10:01 +0000
 
 setup-wizard-dist (3:3.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 10 Feb 2018 15:11:29 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 10 Feb 2018 15:11:29 +0000
 
 setup-wizard-dist (3:3.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 06 Feb 2018 00:56:24 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 06 Feb 2018 00:56:24 +0000
 
 setup-wizard-dist (3:3.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 01 Feb 2018 15:38:49 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 01 Feb 2018 15:38:49 +0000
 
 setup-wizard-dist (3:2.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 21 Jan 2018 13:37:06 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 21 Jan 2018 13:37:06 +0000
 
 setup-wizard-dist (3:2.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 18 Jan 2018 17:35:38 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 18 Jan 2018 17:35:38 +0000
 
 setup-wizard-dist (3:2.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 12 Jan 2018 20:15:30 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 12 Jan 2018 20:15:30 +0000
 
 setup-wizard-dist (3:2.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 06 Jan 2018 15:09:02 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 06 Jan 2018 15:09:02 +0000
 
 setup-wizard-dist (3:2.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 26 Jul 2017 15:35:28 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 26 Jul 2017 15:35:28 +0000
 
 setup-wizard-dist (3:2.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 26 Jul 2017 14:45:16 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 26 Jul 2017 14:45:16 +0000
 
 setup-wizard-dist (3:2.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 06 Mar 2017 16:21:33 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 06 Mar 2017 16:21:33 +0000
 
 setup-wizard-dist (3:2.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 27 Feb 2017 02:08:05 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 27 Feb 2017 02:08:05 +0000
 
 setup-wizard-dist (3:2.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 17 Feb 2017 14:18:45 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 17 Feb 2017 14:18:45 +0000
 
 setup-wizard-dist (3:2.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 18 Jan 2017 14:36:13 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 18 Jan 2017 14:36:13 +0000
 
 setup-wizard-dist (3:1.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 15 Jan 2017 15:39:48 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 15 Jan 2017 15:39:48 +0000
 
 setup-wizard-dist (3:1.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 10 Dec 2016 02:42:26 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 10 Dec 2016 02:42:26 +0000
 
 setup-wizard-dist (3:1.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 26 Apr 2016 05:08:58 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 26 Apr 2016 05:08:58 +0000
 
 setup-wizard-dist (3:1.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 26 Apr 2016 05:08:57 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 26 Apr 2016 05:08:57 +0000
 
 setup-wizard-dist (3:1.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 26 Aug 2015 23:32:02 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 26 Aug 2015 23:32:02 +0000
 
 setup-wizard-dist (3:1.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 25 Aug 2015 14:08:37 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 25 Aug 2015 14:08:37 +0000
 
 setup-wizard-dist (3:1.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 24 Aug 2015 17:47:33 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 24 Aug 2015 17:47:33 +0000
 
 setup-wizard-dist (3:1.2-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 03 Jun 2015 15:00:45 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 03 Jun 2015 15:00:45 +0000
 
 setup-wizard-dist (3:1.1-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 28 May 2015 15:25:46 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 28 May 2015 15:25:46 +0000
 
 setup-wizard-dist (3:1.0-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 23 May 2015 14:50:45 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 23 May 2015 14:50:45 +0000
 
 setup-wizard-dist (3:0.9-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 30 Apr 2015 17:57:15 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 30 Apr 2015 17:57:15 +0000
 
 setup-wizard-dist (3:0.8-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 07 Apr 2015 17:43:17 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 07 Apr 2015 17:43:17 +0000
 
 setup-wizard-dist (3:0.7-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 30 Mar 2015 12:21:58 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 30 Mar 2015 12:21:58 +0000
 
 setup-wizard-dist (3:0.6-1) unstable; urgency=low
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 24 Mar 2015 17:33:30 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 24 Mar 2015 17:33:30 +0000
 
 setup-wizard-dist (3:0.5-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 12 Feb 2015 22:08:50 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 12 Feb 2015 22:08:50 +0000
 
 setup-wizard-dist (3:0.4-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 04 Feb 2015 00:53:03 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 04 Feb 2015 00:53:03 +0000
 
 setup-wizard-dist (3:0.3-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 01 Jan 2015 15:18:01 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 01 Jan 2015 15:18:01 +0000
 
 setup-wizard-dist (3:0.2-1) unstable; urgency=low
 
   * New upstream version.
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 26 Nov 2014 20:35:45 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 26 Nov 2014 20:35:45 +0000
 
 setup-wizard-dist (3:0.1-1) unstable; urgency=low
 
