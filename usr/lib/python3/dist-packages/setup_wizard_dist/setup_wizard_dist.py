@@ -319,20 +319,17 @@ def main():
    if Common.show_disclaimer:
       if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
          print('INFO: /usr/share/whonix-setup-wizard/status-files/disclaimer.skip exists.')
-         return
-      if os.path.isfile('/var/cache/whonix-setup-wizard/status-files/disclaimer.done'):
+      elif os.path.isfile('/var/cache/whonix-setup-wizard/status-files/disclaimer.done'):
          print('INFO: /var/cache/whonix-setup-wizard/status-files/disclaimer.done exists.')
-         return
-      if os.path.isfile('/usr/share/setup-dist/status-files/disclaimer.skip'):
+      elif os.path.isfile('/usr/share/setup-dist/status-files/disclaimer.skip'):
          print('INFO: /usr/share/setup-dist/status-files/disclaimer.skip exists.')
-         return
-      if os.path.isfile('/var/cache/setup-dist/status-files/disclaimer.done'):
+      elif os.path.isfile('/var/cache/setup-dist/status-files/disclaimer.done'):
          print('INFO: /var/cache/setup-dist/status-files/disclaimer.done exists.')
-         return
-      print('WARNING: legal not accepted. Shutdown initiated.')
-      command = '/sbin/poweroff'
-      call(command, shell=True)
-      sys.exit()
+      else:
+         print('WARNING: legal not accepted. Shutdown initiated.')
+         command = '/sbin/poweroff'
+         call(command, shell=True)
+         sys.exit()
 
    if Common.environment == 'gateway':
       '''
