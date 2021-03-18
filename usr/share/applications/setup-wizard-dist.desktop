@@ -4,7 +4,7 @@
 [Desktop Entry]
 Type=Application
 Terminal=false
-Exec=setup-wizard-dist
+Exec=/usr/lib/setup-wizard-dist/setup-wizard-dist
 Name=Setup Wizard Distribution
 GenericName=Setup Wizard Distribution
 Comment=Distribution Setup Wizard
