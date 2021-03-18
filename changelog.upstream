@@ -1,3 +1,27 @@
+commit c2f547f21ec4cee6d7bafbcae6c96355748c5689
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 18 08:15:50 2021 -0400
+
+    set environment variable started_by_setup_wizard_dist
+
+commit 15439464d479285180c98450192ff819bcafcdbd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 18 08:14:37 2021 -0400
+
+    fix
+
+commit f71e58f2a6b7966ac7fe7bade43857f6f62421a3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 18 08:11:30 2021 -0400
+
+    add start menu entry
+
+commit a51b280965669e4805a382280f8c81936e09e4fe
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 17 12:35:46 2021 -0400
+
+    bumped changelog version
+
 commit 90ca87a00b77b11850e2054fe0f83b5257966af8
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 17 12:34:39 2021 -0400
