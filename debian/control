@@ -16,6 +16,7 @@ Architecture: all
 Depends: setup-dist, python3-yaml, repository-dist,
  helper-scripts, python3, x11-xserver-utils, ${misc:Depends}
 Recommends: anon-icon-pack
+Provides: whonix-setup-wizard
 Replaces: whonix-setup-wizard
 Conflicts: whonix-setup-wizard
 Description: First Boot Setup
