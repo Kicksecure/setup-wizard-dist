@@ -5,11 +5,12 @@ Source: setup-wizard-dist
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@whonix.org>
-Build-Depends: debhelper (>= 12), python3
+Build-Depends: debhelper (>= 13), debhelper-compat (= 13), python3
 Homepage: https://www.whonix.org/
 Vcs-Browser: https://github.com/Whonix/setup-wizard-dist
 Vcs-Git: https://github.com/Whonix/setup-wizard-dist.git
-Standards-Version: 4.3.0
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
 
 Package: setup-wizard-dist
 Architecture: all
