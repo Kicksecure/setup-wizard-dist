@@ -1,3 +1,59 @@
+commit 51b0749c9f8580506316f79402c811b2ce8eb495
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 07:31:03 2021 -0400
+
+    move usr/lib/setup-wizard-dist to usr/libexec/setup-wizard-dist as per lintian FHS
+
+commit b2e4df9b1d7c0d21c1aa3e1284bb891c2782437c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 07:30:11 2021 -0400
+
+    move usr/lib/setup-wizard-dist to usr/libexec/setup-wizard-dist as per lintian FHS
+
+commit 4c255bb170c47ccd7a7ff30cc065a88a0b965acc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 07:26:21 2021 -0400
+
+    chmod -x usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py
+    
+    as per lintian FHS
+
+commit a5fb9076fd6cad97f8ee847729864f6f66e59491
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 12:48:57 2021 -0400
+
+    move /usr/lib/helper-scripts and /usr/lib/curl-scripts to /usr/libexec/helper-scripts as per lintian FHS
+
+commit 6116818b26bb88bb85db5ca4d490a16d816b83fc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 11:47:35 2021 -0400
+
+    re-generate man pages (generated using "genmkfile manpages")
+
+commit eb4aa5a22f6e96087413303e350de4d9787e89b6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 11:43:58 2021 -0400
+
+    man page
+
+commit 4ad5c60b758c5cdac13dfcb431664bfa93002e43
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 05:48:26 2021 -0400
+
+    bullseye
+
+commit 34538e94eba1d86f3ce271769997fa0455cc9084
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 1 16:24:42 2021 -0400
+
+    readme
+
+commit 95a886a13adba9a461486f12e84f668d5a0bcc8d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 23 07:50:11 2021 -0400
+
+    bumped changelog version
+
 commit 3a67de7e7310eb7769cca407c081f62cb5866389
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Mar 23 07:38:38 2021 -0400
