@@ -1,3 +1,21 @@
+commit 71b2f405e4843792a257549185eb92dcc65b0776
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 22 04:31:46 2021 -0400
+
+    update path
+
+commit 1964f1babf32d11ae44f0e12dfc34e6e0c4e783b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 22 04:31:01 2021 -0400
+
+    Depends: python3-distutils
+
+commit 59d9d87d8976f1a784629219e9e9d377a7d25bb3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 5 17:05:33 2021 -0400
+
+    bumped changelog version
+
 commit 51b0749c9f8580506316f79402c811b2ce8eb495
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Aug 4 07:31:03 2021 -0400
