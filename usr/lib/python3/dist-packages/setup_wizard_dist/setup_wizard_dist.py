@@ -345,7 +345,7 @@ def main():
       f.close()
 
    os.environ["started_by_setup_wizard_dist"] = "true"
-   command = '/usr/lib/setup-dist/ft_m_end'
+   command = '/usr/libexec/setup-dist/ft_m_end'
    call(command, shell=True)
 
 
