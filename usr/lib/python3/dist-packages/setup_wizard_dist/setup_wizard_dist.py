@@ -34,7 +34,6 @@ class Common:
         environment = 'workstation'
     else:
         environment = 'machine'
-        print("Whonix-Setup-Wizard cannot decide environment: marker file in /usr/share/anon-ws-base-files/workstation is missing.")
 
     if not os.path.exists('/var/cache/setup-dist/status-files'):
         pathlib.Path("/var/cache/setup-dist/status-files").mkdir(parents=True, exist_ok=True)
