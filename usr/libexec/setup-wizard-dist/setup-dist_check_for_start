@@ -84,13 +84,6 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
     print(tor_status)
 
     setup_wizard_dist_start()
-
-
-elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
+else:
     setup_wizard_exit_if_done_file_exists()
     setup_wizard_dist_start()
-
-else:
-
-    print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Neither Whonix-Gateway nor Whonix-Workstation detected. Exiting.')
-    sys.exit(1)
