@@ -1,3 +1,15 @@
+commit b5ddc7aa0957a04e91d55f032518764745f19a24
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Mar 12 05:42:29 2022 -0500
+
+    fix: do not autostart in Kicksecure for Qubes
+
+commit 17c09a9ad323ffc7790861d8fc71d264b6f2d4ce
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Feb 20 13:54:55 2022 -0500
+
+    bumped changelog version
+
 commit 2bfa8d8a3bb7f32fd49031a8c72e89ecfbc35f0a
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Feb 17 05:36:08 2022 -0500
