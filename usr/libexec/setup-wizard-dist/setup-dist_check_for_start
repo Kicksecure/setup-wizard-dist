@@ -19,7 +19,8 @@ def setup_wizard_exit_if_done_file_exists():
       os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
       os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
       os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done') or
-      os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
+      os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip') or
+      os.path.exists('/usr/share/qubes/marker-vm')
    ):
       print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start setup-dist done file exists. Exiting.')
       sys.exit()
