@@ -16,7 +16,7 @@ Package: setup-wizard-dist
 Architecture: all
 Depends: setup-dist, python3-yaml, python3-distutils, repository-dist,
  helper-scripts, python3, x11-xserver-utils, ${misc:Depends}
-Recommends: anon-icon-pack
+Recommends: icon-pack-dist
 Provides: whonix-setup-wizard
 Replaces: whonix-setup-wizard
 Conflicts: whonix-setup-wizard

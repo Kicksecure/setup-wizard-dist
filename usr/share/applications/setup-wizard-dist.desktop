@@ -9,7 +9,7 @@ Name=Setup Wizard Distribution
 GenericName=Setup Wizard Distribution
 Comment=Distribution Setup Wizard
 Categories=System;
-Icon=/usr/share/icons/anon-icon-pack/whonix.png
+Icon=/usr/share/icons/icon-pack-dist/whonix.png
 ## Because we need a wrapper to start it.
 X-KDE-StartupNotify=false
 Keywords=system;Kicksecure,Whonix;setup;connection;Tor;Anon;
