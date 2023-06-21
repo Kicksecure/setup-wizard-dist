@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 13), debhelper-compat (= 13), python3
 Homepage: https://www.whonix.org/
 Vcs-Browser: https://github.com/Whonix/setup-wizard-dist
 Vcs-Git: https://github.com/Whonix/setup-wizard-dist.git
-Standards-Version: 4.6.1.0
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 
 Package: setup-wizard-dist
