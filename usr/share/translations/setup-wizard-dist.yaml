@@ -100,7 +100,7 @@ setup-dist:
             <br />
             If you want to <u>change the keyboard layout</u> from the default "us" to something else&#58;<br />
             <br />
-            <b>XFCE&#58;</b>
+            <b>Xfce&#58;</b>
             <blockquote>Applications -> Settings -> Keyboard -> Layout -> disable "use system defaults" -> add your layout at the bottom -> remove the old layout -> close</blockquote></p>
 
 
