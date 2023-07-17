@@ -1,12 +1,12 @@
-## Copyright (C) 2012 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## Copyright (C) 2012 - 2023 ENCRYPTED SUPPORT LP <adrelanos@kicksecure.com>
 ## See the file COPYING for copying conditions.
 
 Source: setup-wizard-dist
 Section: misc
 Priority: optional
-Maintainer: Patrick Schleizer <adrelanos@whonix.org>
+Maintainer: Patrick Schleizer <adrelanos@kicksecure.com>
 Build-Depends: debhelper (>= 13), debhelper-compat (= 13), python3
-Homepage: https://www.kicksecure.com/
+Homepage: https://github.com/Kicksecure/setup-wizard-dist
 Vcs-Browser: https://github.com/Kicksecure/setup-wizard-dist
 Vcs-Git: https://github.com/Kicksecure/setup-wizard-dist.git
 Standards-Version: 4.6.2
