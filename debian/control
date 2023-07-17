@@ -6,9 +6,9 @@ Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@whonix.org>
 Build-Depends: debhelper (>= 13), debhelper-compat (= 13), python3
-Homepage: https://www.whonix.org/
-Vcs-Browser: https://github.com/Whonix/setup-wizard-dist
-Vcs-Git: https://github.com/Whonix/setup-wizard-dist.git
+Homepage: https://www.kicksecure.com/
+Vcs-Browser: https://github.com/Kicksecure/setup-wizard-dist
+Vcs-Git: https://github.com/Kicksecure/setup-wizard-dist.git
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 
