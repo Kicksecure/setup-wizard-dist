@@ -7,3 +7,7 @@
 ## at first boot would require password entry.
 ## Feel free to disable it.
 %sudo ALL=NOPASSWD: /usr/bin/setup-wizard-dist
+
+## Comment in to make this work when package
+## qubes-core-agent-passwordless-root is uninstalled.
+#user ALL=NOPASSWD: /usr/bin/setup-wizard-dist
