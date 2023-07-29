@@ -16,10 +16,9 @@ if ! test -x /usr/bin/setup-wizard-dist ; then
 fi
 
 title="$0 autostart"
-status_file=~/.config/setup-wizard-dist
+status_file=~/.config/setup-wizard-dist/setup-wizard-dist-autostart-sudo-fail-acknowledged.status
 
-
-if ! sudo --non-interactive --set-home /usr/bin/setup-wizard-dist ; then
+if ! sudo --list /usr/bin/setup-wizard-dist >/dev/null ; then
   text="\
 command:
 sudo --non-interactive --set-home /usr/bin/setup-wizard-dist
@@ -28,4 +27,8 @@ failed.
 This might be due to the user using sudo hardening."
 
   /usr/libexec/msgcollector/one-time-popup "$status_file" "$title" "$text"
+
+  exit 1
 fi
+
+sudo --non-interactive --set-home /usr/bin/setup-wizard-dist
