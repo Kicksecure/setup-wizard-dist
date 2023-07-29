@@ -6,7 +6,4 @@
 ## For better usability, because otherwise the autostart of setup-wizard-dist
 ## at first boot would require password entry.
 ## Feel free to disable it.
-## Legacy.
-%sudo ALL=NOPASSWD: /usr/bin/setup-wizard-dist setup
-## New.
 %sudo ALL=NOPASSWD: /usr/bin/setup-wizard-dist
