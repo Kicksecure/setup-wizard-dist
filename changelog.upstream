@@ -1,3 +1,33 @@
+commit c6d592d9bc74eddc1ad1f727a1d4fbe76f640462
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jul 29 07:21:10 2023 -0400
+
+    better error handling in case of sudo issues
+
+commit 609339a121e9bc2f330ccfcd9cf876aa251b1698
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jul 29 07:02:20 2023 -0400
+
+    better error handling in case of sudo issues
+
+commit 08b3682fef4063864381129edd5d94dee0ad12c9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jul 29 06:38:05 2023 -0400
+
+    comment
+
+commit cdf83e11d0630899fa345ce956441afaece3ecdf
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jul 29 06:35:14 2023 -0400
+
+    cleanup
+
+commit e35473fa415c8ecd6e9f565e0fed490c478d4887
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jul 17 11:49:12 2023 -0400
+
+    bumped changelog version
+
 commit 78132f0635b471fa01b70fc1413004042e61972a
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jul 17 11:19:17 2023 -0400
