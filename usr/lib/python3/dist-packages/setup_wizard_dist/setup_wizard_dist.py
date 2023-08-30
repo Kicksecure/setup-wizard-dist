@@ -245,7 +245,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
       if not Common.show_disclaimer:
          self.resize(580, 390)
 
-      self.exec_()
+      #self.exec_()
 
     # called by button toggled signal.
     def set_next_button_state(self, state):
@@ -320,6 +320,7 @@ def main():
       print('INFO: No page needs showing.')
    else:
       wizard = setup_wizard_dist()
+      wizard.exec_()
 
    if Common.show_disclaimer:
       if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
