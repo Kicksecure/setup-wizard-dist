@@ -13,18 +13,12 @@ from subprocess import call
 import os, yaml
 import inspect
 import sys
-import signal
 import pathlib
 
 from guimessages.translations import _translations
 from guimessages.guimessage import gui_message
 
 import shutil
-
-
-def sigint_handler(*args):
-    """Handler for the SIGINT signal."""
-    QtWidgets.QApplication.quit()
 
 
 def power_off_system():
@@ -317,14 +311,6 @@ def main():
       sys.exit(1)
 
    app = QtWidgets.QApplication(sys.argv)
-
-   # Bind the CTRL+C signal
-   signal.signal(signal.SIGINT, sigint_handler)
-
-   # Ensure the application will be responsive to the SIGINT signal (CTRL+C)
-   timer = QTimer()
-   timer.timeout.connect(lambda: None)
-   timer.start(500)
 
    # when there is no page need showing, we simply do not start GUI to
    # avoid an empty page
