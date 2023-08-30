@@ -179,7 +179,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
       else:
          self.setWindowTitle('Whonix Setup Wizard')
 
-      available_height = QtWidgets.QDesktopWidget().availableGeometry().height() #- 60
+      available_height = QtWidgets.QDesktopWidget().screenGeometry().height() #- 60
       self.disclaimer_height = 700
       if available_height < self.disclaimer_height:
          self.disclaimer_height = available_height
@@ -251,7 +251,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
         Re-center the window on the screen.
         """
         frame_gm = self.frameGeometry()
-        center_point = QtWidgets.QDesktopWidget().availableGeometry().center()
+        center_point = QtWidgets.QDesktopWidget().screenGeometry().center()
         frame_gm.moveCenter(center_point)
         self.move(frame_gm.topLeft())
 

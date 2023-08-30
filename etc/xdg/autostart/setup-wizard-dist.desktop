@@ -6,4 +6,6 @@ Name=Distribution Setup Wizard
 Comment=First Boot Setup Graphical User Interface
 Type=Application
 Terminal=false
-Exec=/usr/libexec/setup-wizard-dist/setup-dist_check_for_start
+## Hardcoded "sleep 3". Otherwise the desktop environment is not fully initialized,
+## which results in the window being slightly outside the visible area.
+Exec=bash -c "sleep 3 && /usr/libexec/setup-wizard-dist/setup-dist_check_for_start"
