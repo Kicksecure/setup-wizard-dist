@@ -179,8 +179,8 @@ class setup_wizard_dist(QtWidgets.QWizard):
       else:
          self.setWindowTitle('Whonix Setup Wizard')
 
-      available_height = QtWidgets.QDesktopWidget().availableGeometry().height() - 60
-      self.disclaimer_height = 750
+      available_height = QtWidgets.QDesktopWidget().availableGeometry().height() #- 60
+      self.disclaimer_height = 700
       if available_height < self.disclaimer_height:
          self.disclaimer_height = available_height
 
