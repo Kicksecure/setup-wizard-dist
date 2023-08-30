@@ -306,8 +306,6 @@ class setup_wizard_dist(QtWidgets.QWizard):
 
 
 def main():
-   import sys
-
    if os.getuid() != 0:
       print('ERROR: This must be run as root!\nUse "sudo --set-home".')
       sys.exit(1)
