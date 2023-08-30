@@ -5,7 +5,4 @@
 ## See the file COPYING for copying conditions.
 
 from setup_wizard_dist import setup_wizard_dist
-import signal
-signal.signal(signal.SIGINT, signal.SIG_DFL)
-
 setup_wizard_dist.main()
