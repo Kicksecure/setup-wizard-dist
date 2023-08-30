@@ -1,3 +1,53 @@
+commit 2c24aa73392e8fcdba0c81f854a98ce2b6a879e8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 30 15:14:09 2023 -0400
+
+    cleanup
+
+commit 563ac0356f61c7801284f81615dc7d12c59f0a09
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 30 15:10:53 2023 -0400
+
+    allow exiting application using ctrl + c (signal sigint)
+    
+    for easier debugging
+
+commit 026dcb202cc3d699d2d9dcd15fdc1dcba001a5bd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 30 15:05:06 2023 -0400
+
+    remove duplicate import
+
+commit 791053ac8ffdd2d4196cc71aa14cab9ad92a4ea6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 30 15:04:52 2023 -0400
+
+    refactoring
+
+commit fc5f0decb7ea67eaa29a8b12f3599601436b0066
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 30 14:19:32 2023 -0400
+
+    refactoring
+
+commit 4e4a7d72a9dfa7a9d3167783e7ac28a495184078
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 30 14:09:14 2023 -0400
+
+    fix centering the window at first boot
+
+commit eb25aeab66db5185dbeba44835c0ebaf1bd6f9d6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 30 13:29:31 2023 -0400
+
+    reduce window hight
+
+commit 6bfa7cea6bbf3612f92c6c3b36fbb2830f1f6255
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jul 29 08:08:09 2023 -0400
+
+    bumped changelog version
+
 commit c6d592d9bc74eddc1ad1f727a1d4fbe76f640462
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jul 29 07:21:10 2023 -0400

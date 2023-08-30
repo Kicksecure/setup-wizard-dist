@@ -1,3 +1,9 @@
+setup-wizard-dist (3:8.9-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 30 Aug 2023 19:25:19 +0000
+
 setup-wizard-dist (3:8.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
