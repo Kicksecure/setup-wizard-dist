@@ -10,6 +10,7 @@ from PyQt5.QtCore import *
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from subprocess import call
+import signal
 import os, yaml
 import inspect
 import sys
@@ -305,12 +306,23 @@ class setup_wizard_dist(QtWidgets.QWizard):
                 self.center()
 
 
+def signal_handler(sig, frame):
+   sys.exit(0)
+
+
 def main():
    if os.getuid() != 0:
       print('ERROR: This must be run as root!\nUse "sudo --set-home".')
       sys.exit(1)
 
    app = QtWidgets.QApplication(sys.argv)
+
+   signal.signal(signal.SIGINT, signal_handler)
+   signal.signal(signal.SIGTERM, signal_handler)
+
+   timer = QtCore.QTimer()
+   timer.start(500)
+   timer.timeout.connect(lambda: None)
 
    # when there is no page need showing, we simply do not start GUI to
    # avoid an empty page
