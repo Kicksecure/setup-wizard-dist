@@ -5,7 +5,7 @@
 
     <action id="com.kicksecure.setup-wizard-dist.policy">
         <description>Setup Wizard Dist</description>
-        <message>Authentication is required.</message>
+        <message>Authentication is required for Setup Wizard Dist.</message>
         <defaults>
             <allow_any>auth_admin</allow_any>
             <allow_inactive>auth_admin</allow_inactive>

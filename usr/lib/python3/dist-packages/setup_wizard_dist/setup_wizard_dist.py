@@ -331,11 +331,6 @@ def main():
 
    is_authorized, is_challenge, auth_details = result
 
-   if is_authorized:
-      print("The action is authorized.")
-   else:
-      print("The action is not authorized.")
-
    if is_challenge:
       print("User interaction (like a password prompt) is required.")
    else:
@@ -347,6 +342,12 @@ def main():
          print(f"{key}: {value}")
    else:
       print("There are no additional details about the authorization.")
+
+   if is_authorized:
+      print("The action is authorized.")
+   else:
+      print("The action is not authorized.")
+      sys.exit(1)
 
    app = QtWidgets.QApplication(sys.argv)
 
