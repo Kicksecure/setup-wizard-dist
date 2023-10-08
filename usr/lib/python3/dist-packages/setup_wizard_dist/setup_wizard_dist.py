@@ -27,8 +27,8 @@ def power_off_system():
     if os.path.exists('/etc/dev'):
       print('INFO: Skipping shutdown because file /etc/dev exists.')
       sys-exit(0)
-    command = '/sbin/poweroff'
-    call(command, shell=True)
+    command = ['/sbin/poweroff']
+    call(command)
     sys.exit(1)
 
 
@@ -311,10 +311,6 @@ def signal_handler(sig, frame):
 
 
 def main():
-   if os.getuid() != 0:
-      print('ERROR: This must be run as root!\nUse "sudo --set-home".')
-      sys.exit(1)
-
    app = QtWidgets.QApplication(sys.argv)
 
    signal.signal(signal.SIGINT, signal_handler)
@@ -357,10 +353,8 @@ def main():
       f = open('/var/cache/setup-dist/status-files/setup-dist.done', 'w')
       f.close()
 
-   os.environ["started_by_setup_wizard_dist"] = "true"
-   command = '/usr/libexec/setup-dist/ft_m_end'
-   call(command, shell=True)
-
+   command = ['env', 'started_by_setup_wizard_dist=true', '/usr/libexec/setup-dist/ft_m_end']
+   exit_code = call(command)
 
 if __name__ == "__main__":
     main()
