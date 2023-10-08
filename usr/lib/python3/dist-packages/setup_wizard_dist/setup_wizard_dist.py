@@ -307,7 +307,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
 
 
 def signal_handler(sig, frame):
-   sys.exit(0)
+   sys.exit(128 + sig)
 
 
 def main():
