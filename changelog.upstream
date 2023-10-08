@@ -1,3 +1,21 @@
+commit c23774005c84c33718652bff5188d1f88f695f01
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Oct 8 08:44:16 2023 -0400
+
+    cleanup, setup-wizard-dist actually no longer starts repository-dist
+
+commit 0d2742a4ee2630831a2d50e58ad10857135c4dbf
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Oct 8 08:42:58 2023 -0400
+
+    policykit actually not required
+
+commit 70bfba98dfa8954e39375d4a31290b618073b74f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Oct 8 08:23:56 2023 -0400
+
+    bumped changelog version
+
 commit 03550b7ef16e40b6d763852d013f10315dfb02b1
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Oct 8 08:10:29 2023 -0400
