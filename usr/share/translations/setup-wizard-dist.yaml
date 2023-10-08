@@ -102,14 +102,3 @@ setup-dist:
             <br />
             <b>Xfce&#58;</b>
             <blockquote>Applications -> Settings -> Keyboard -> Layout -> disable "use system defaults" -> add your layout at the bottom -> remove the old layout -> close</blockquote></p>
-
-
-not_root:
-    icon: Critical
-    button: Ok
-    position: center
-    en:
-        title: Root privileges required
-        message:
-            <p><B>ERROR. This must be run as root!</B></p>
-            <p>Use a root file manager or "sudo --set-home" in a terminal.</p>

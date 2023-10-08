@@ -11,7 +11,7 @@ if ! test -e /usr/bin/setup-wizard-dist ; then
 fi
 
 if ! test -x /usr/bin/setup-wizard-dist ; then
-  echo "/usr/bin/setup-wizard-dist not executeable!"
+  echo "/usr/bin/setup-wizard-dist not executable!"
   exit 1
 fi
 
@@ -21,7 +21,7 @@ status_file=~/.config/setup-wizard-dist/setup-wizard-dist-autostart-sudo-fail-ac
 if ! sudo --list /usr/bin/setup-wizard-dist >/dev/null ; then
   text="\
 command:
-sudo --non-interactive --set-home /usr/bin/setup-wizard-dist
+/usr/bin/setup-wizard-dist
 failed.
 
 This might be due to the user using sudo hardening."
@@ -31,4 +31,4 @@ This might be due to the user using sudo hardening."
   exit 1
 fi
 
-sudo --non-interactive --set-home /usr/bin/setup-wizard-dist
+/usr/bin/setup-wizard-dist
