@@ -15,20 +15,4 @@ if ! test -x /usr/bin/setup-wizard-dist ; then
   exit 1
 fi
 
-title="$0 autostart"
-status_file=~/.config/setup-wizard-dist/setup-wizard-dist-autostart-sudo-fail-acknowledged.status
-
-if ! sudo --list /usr/bin/setup-wizard-dist >/dev/null ; then
-  text="\
-command:
-/usr/bin/setup-wizard-dist
-failed.
-
-This might be due to the user using sudo hardening."
-
-  /usr/libexec/msgcollector/one-time-popup "$status_file" "$title" "$text"
-
-  exit 1
-fi
-
 /usr/bin/setup-wizard-dist
