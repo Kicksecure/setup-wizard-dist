@@ -311,6 +311,43 @@ def signal_handler(sig, frame):
 
 
 def main():
+   import dbus
+
+   bus = dbus.SystemBus()
+   proxy = bus.get_object('org.freedesktop.PolicyKit1', '/org/freedesktop/PolicyKit1/Authority')
+   authority = dbus.Interface(proxy, dbus_interface='org.freedesktop.PolicyKit1.Authority')
+
+   system_bus_name = bus.get_unique_name()
+
+   subject = ('system-bus-name', {'name' : system_bus_name})
+   action_id = 'com.kicksecure.setup-wizard-dist.policy'
+   details = {}
+   flags = 1            # AllowUserInteraction flag
+   cancellation_id = '' # No cancellation id
+
+   result = authority.CheckAuthorization(subject, action_id, details, flags, cancellation_id)
+
+   print(result)
+
+   is_authorized, is_challenge, auth_details = result
+
+   if is_authorized:
+      print("The action is authorized.")
+   else:
+      print("The action is not authorized.")
+
+   if is_challenge:
+      print("User interaction (like a password prompt) is required.")
+   else:
+      print("No user interaction is required.")
+
+   if auth_details:
+      print("Additional authorization details:")
+      for key, value in auth_details.items():
+         print(f"{key}: {value}")
+   else:
+      print("There are no additional details about the authorization.")
+
    app = QtWidgets.QApplication(sys.argv)
 
    signal.signal(signal.SIGINT, signal_handler)
