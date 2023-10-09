@@ -4,22 +4,23 @@
 ## Copyright (C) 2014 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
+import sys
+import signal
+
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from subprocess import call
-import signal
-import os, yaml
+
+import os
+import yaml
 import inspect
-import sys
 import pathlib
 
 from guimessages.translations import _translations
 from guimessages.guimessage import gui_message
-
-import shutil
 
 
 def power_off_system():
