@@ -4,10 +4,10 @@
 ## Copyright (C) 2014 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
-from subprocess import call
-import sys, os
+import sys
+import os
 import time
-import shutil
+from subprocess import call
 
 
 def setup_wizard_dist_start():
