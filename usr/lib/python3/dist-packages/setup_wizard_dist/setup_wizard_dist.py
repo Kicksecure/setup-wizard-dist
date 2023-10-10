@@ -64,6 +64,8 @@ class Common:
                        not os.path.exists('/usr/share/whonix-setup-wizard/status-files/finish_page.skip') and
                        not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
                        not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip')
+                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
+                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done')
                        )
 
     if(show_finish_page):
@@ -343,16 +345,10 @@ def main():
 
    if Common.environment == 'gateway':
       '''
-      anon_connection_wizard is only installed in whonix-gw.
-      Therefore, it is reasonable to move the import here to prevent
-      missing dependency that happen when import anon_connection_wizard in whonix-ws.
+      anon-connection-wizard on Whonix-Gateway.
       '''
-      from anon_connection_wizard import anon_connection_wizard
-      anon_connection_wizard = anon_connection_wizard.main()
-
-   if not os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done'):
-      f = open('/var/cache/setup-dist/status-files/setup-dist.done', 'w')
-      f.close()
+      command = ['anon-connection-wizard']
+      exit_code = call(command)
 
    command = ['env', 'started_by_setup_wizard_dist=true', '/usr/libexec/setup-dist/ft_m_end']
    exit_code = call(command)
