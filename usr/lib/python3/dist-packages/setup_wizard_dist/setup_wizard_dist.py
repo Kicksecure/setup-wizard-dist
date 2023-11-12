@@ -23,13 +23,16 @@ from guimessages.translations import _translations
 from guimessages.guimessage import gui_message
 
 
-def power_off_system():
-    print('WARNING: legal not accepted. Shutdown initiated.')
-    if os.path.exists('/etc/dev'):
-      print('INFO: Skipping shutdown because file /etc/dev exists.')
-      sys-exit(0)
-    command = ['/sbin/poweroff']
-    call(command)
+def declined_legal():
+    print('WARNING: legal not accepted.')
+
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.Warning)
+    msg.setWindowTitle("Restricted Access")
+    msg.setText("Because the agreements have been declined, you are prohibited from using this software.")
+    msg.setStandardButtons(QMessageBox.Ok)
+    msg.exec_()
+
     sys.exit(1)
 
 
@@ -286,12 +289,12 @@ class setup_wizard_dist(QtWidgets.QWizard):
                # Disclaimer page 1 not understood -> leave
                if self.disclaimer_1.no_button.isChecked():
                   self.hide()
-                  power_off_system()
+                  declined_legal()
 
                # Disclaimer page 2 not understood -> leave
                if self.disclaimer_2.no_button.isChecked():
                   self.hide()
-                  power_off_system()
+                  declined_legal()
 
                f = open('/var/cache/setup-dist/status-files/disclaimer.done', 'w')
                f.close()
@@ -341,7 +344,7 @@ def main():
       elif os.path.isfile('/var/cache/setup-dist/status-files/disclaimer.done'):
          print('INFO: /var/cache/setup-dist/status-files/disclaimer.done exists.')
       else:
-         power_off_system()
+         declined_legal()
 
    if Common.environment == 'gateway':
       '''
