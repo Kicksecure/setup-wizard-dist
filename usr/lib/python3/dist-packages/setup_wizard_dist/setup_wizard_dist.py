@@ -63,8 +63,8 @@ class Common:
     show_finish_page = (not os.path.exists('/var/cache/whonix-setup-wizard/status-files/finish_page.done') and
                        not os.path.exists('/usr/share/whonix-setup-wizard/status-files/finish_page.skip') and
                        not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
-                       not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip')
-                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
+                       not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip') and
+                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip') and
                        not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done')
                        )
 
