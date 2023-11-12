@@ -1,3 +1,21 @@
+commit a69b08b9c2f023da531cebd4b56a3a71fa4787fd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 11 22:32:02 2023 -0500
+
+    popup instead of shutdown of legal was declined
+
+commit fe81eb2f488a634174afcdfd8093f26438b0358f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 11 22:25:04 2023 -0500
+
+    fix
+
+commit 4369b4cdebc0cad6291dd95347fcd479552c8777
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 11 20:36:15 2023 +0000
+
+    bumped changelog version
+
 commit 072994849a094ad59f6bcd73aec532b76e91d714
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 11 15:35:44 2023 -0500
