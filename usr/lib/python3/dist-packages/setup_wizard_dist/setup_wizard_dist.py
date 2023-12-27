@@ -259,8 +259,6 @@ class setup_wizard_dist(QtWidgets.QWizard):
       if not Common.show_disclaimer:
          self.resize(580, 390)
 
-      #self.exec_()
-
     # called by button toggled signal.
     def set_next_button_state(self, state):
         if state:
