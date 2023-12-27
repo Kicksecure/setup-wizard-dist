@@ -196,12 +196,19 @@ class setup_wizard_dist(QtWidgets.QWizard):
       else:
          self.setWindowTitle('Whonix Setup Wizard')
 
-      available_height = QtWidgets.QDesktopWidget().screenGeometry().height() #- 60
-      self.disclaimer_height = 700
-      if available_height < self.disclaimer_height:
-         self.disclaimer_height = available_height
+      screen_resolution = QtWidgets.QDesktopWidget().screenGeometry()
+      screen_height = screen_resolution.height()
+      screen_width = screen_resolution.width()
 
-      self.resize(760, self.disclaimer_height)
+      window_width_percentage = 0.8
+      window_height_percentage = 0.8
+
+      # Calculate window dimensions
+      self.window_width = int(screen_width * window_width_percentage)
+      self.window_height = int(screen_height * window_height_percentage)
+
+      # Resize the window
+      self.resize(self.window_width, self.window_height)
 
       # We use QTextBrowser with a white background.
       # Set a default (transparent) background.
@@ -308,7 +315,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
         if Common.show_disclaimer:
             if self.currentId() == self.steps.index('disclaimer_2'):
                 # Back to disclaimer size.
-                self.resize(760, self.disclaimer_height)
+                self.resize(self.window_width, self.window_height)
                 self.center()
 
 
