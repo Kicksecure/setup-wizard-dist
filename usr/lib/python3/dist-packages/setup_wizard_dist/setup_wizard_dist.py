@@ -59,6 +59,8 @@ class Common:
                        not os.path.exists('/usr/share/setup-dist/status-files/disclaimer.skip')
                       )
 
+    #show_disclaimer = True
+
     if(show_disclaimer):
         wizard_steps.append('disclaimer_1')
         wizard_steps.append('disclaimer_2')
@@ -301,8 +303,9 @@ class setup_wizard_dist(QtWidgets.QWizard):
                   self.hide()
                   declined_legal()
 
-               f = open('/var/cache/setup-dist/status-files/disclaimer.done', 'w')
-               f.close()
+               file_path = pathlib.Path('/var/cache/setup-dist/status-files/disclaimer.done')
+               if not os.path.exists(file_path):
+                  file_path.touch(exist_ok=True)
 
             if self.env == 'workstation':
                self.finish_page.icon.setPixmap(QtGui.QPixmap( \
