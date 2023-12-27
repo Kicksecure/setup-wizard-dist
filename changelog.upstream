@@ -1,3 +1,27 @@
+commit 251249d6e924614c70ee15b6899f145ab822b0f0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Dec 27 10:03:52 2023 -0500
+
+    fix: only touch done file if not yet existing
+
+commit f066352df1811da9adbe7f8335bec3a49c11ee85
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Dec 27 09:40:05 2023 -0500
+
+    cleanup
+
+commit e1e4ddd7bfda395a87a524f818ad763327f3e772
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Dec 27 09:39:13 2023 -0500
+
+    improve window size calculation
+
+commit 43a17a2f510655767012c569b231b3c50d04f258
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Nov 12 03:32:26 2023 +0000
+
+    bumped changelog version
+
 commit a69b08b9c2f023da531cebd4b56a3a71fa4787fd
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 11 22:32:02 2023 -0500
