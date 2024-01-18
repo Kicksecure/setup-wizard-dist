@@ -1,13 +1,11 @@
 # First Boot Setup #
 
+Disclaimer.
+
 When distribution starts for the first time, it won't automatically connect
 to the public Tor network. This is useful for users who want to hide Tor from
 their ISP. Anon Connection Wizard is automatically started, which educates
 about different methods to connect (public Tor network, bridges, etc.).
-
-Also automatically starts the Distribution Repository Tool (if installed), so
-the user can decide whether to use Distribution's Repository and if yes,
-choose which one.
 
 ## How to install `setup-wizard-dist` using apt-get ##
 
