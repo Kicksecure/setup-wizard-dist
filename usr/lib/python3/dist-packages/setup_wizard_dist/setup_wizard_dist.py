@@ -59,6 +59,7 @@ class Common:
                        not os.path.exists('/usr/share/setup-dist/status-files/disclaimer.skip')
                       )
 
+    ## Disable disclaimer.
     show_disclaimer = False
 
     if(show_disclaimer):
