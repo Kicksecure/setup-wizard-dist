@@ -173,6 +173,8 @@ class setup_wizard_dist(QtWidgets.QWizard):
     def __init__(self):
         super(setup_wizard_dist, self).__init__()
 
+        self.finished_normally = False
+
         translation = _translations(Common.translations_path, 'setup-dist')
         self._ = translation.gettext
 
@@ -190,6 +192,11 @@ class setup_wizard_dist(QtWidgets.QWizard):
         self.addPage(self.finish_page)
 
         self.setupUi()
+
+    def done(self, result):
+        if result == QtWidgets.QWizard.Accepted:
+            self.finished_normally = True
+        super(setup_wizard_dist, self).done(result)
 
     def setupUi(self):
       self.setWindowIcon(QtGui.QIcon("/usr/share/icons/icon-pack-dist/whonix.ico"))
@@ -354,6 +361,10 @@ def main():
          print('INFO: /var/cache/setup-dist/status-files/disclaimer.done exists.')
       else:
          declined_legal()
+
+   if not wizard.finished_normally:
+      print('INFO: Canceled.')
+      sys.exit(0)
 
    if Common.environment == 'gateway':
       '''
