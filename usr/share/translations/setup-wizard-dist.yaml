@@ -86,10 +86,10 @@ setup-dist:
           <p>The <code>setup-wizard-dist</code> has been successfully completed.</p>
           <p>Please note the following default credentials:</p>
           <ul>
-            <li>Default User Name: <code>user</code></li>
-            <li>Default Password: <code>changeme</code></li>
+            <li><b>Default username:</b> <u><code>user</code></u></li>
+            <li><b>Default password:</b> <u><code>changeme</code></u></li>
           </ul>
-          <p>Click the "Finish" button to initiate a <code>systemcheck</code>.</p>
+          <p>Click the "Finish" button to run <code>systemcheck</code>.</p>
 
         first_use_notice:
             <p>Welcome to This OS-Gateway!<br />
