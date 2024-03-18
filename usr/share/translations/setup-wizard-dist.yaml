@@ -82,9 +82,14 @@ setup-dist:
         accept: Understood / Verstanden
         reject: Not understood / Nicht verstanden
 
-        finish_page:
-            <p>setup-wizard-dist is completed.</p>
-            <p>Click "Finish" to run systemcheck.</p>
+        finish_page: |
+          <p>The <code>setup-wizard-dist</code> has been successfully completed.</p>
+          <p>Please note the following default credentials:</p>
+          <ul>
+            <li>Default User Name: <code>user</code></li>
+            <li>Default Password: <code>changeme</code></li>
+          </ul>
+          <p>Click the "Finish" button to initiate a <code>systemcheck</code>.</p>
 
         first_use_notice:
             <p>Welcome to This OS-Gateway!<br />
