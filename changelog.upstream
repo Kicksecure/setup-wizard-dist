@@ -1,3 +1,27 @@
+commit 3cd01993a9ececb48759702151fbd6e850871266
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 18 10:55:11 2024 -0400
+
+    do not run systemcheck if cancel button has been pressed
+
+commit a2ffdb1d5e2d31ef94f151dea9c8a9c1c3351bb1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 18 10:42:55 2024 -0400
+
+    output
+
+commit eb13b746cf9a388505e667ab2e6e41f9e92fff00
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 18 10:40:23 2024 -0400
+
+    improve finish page to add default credentials
+
+commit 66c3db4f5bfef0b17664de8f589088957a36db1b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jan 26 11:58:59 2024 +0000
+
+    bumped changelog version
+
 commit 1612ef6586fe1a9d8a186aaa0a02f5b3e43c142c
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Jan 26 03:18:18 2024 -0500
