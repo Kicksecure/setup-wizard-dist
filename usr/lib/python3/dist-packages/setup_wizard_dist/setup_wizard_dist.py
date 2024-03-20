@@ -367,9 +367,9 @@ def main():
       print('INFO: Canceled.')
       sys.exit(0)
 
-   if Common.environment == 'gateway':
-      command = ['anon-connection-wizard']
-      exit_code = call(command)
+   # if Common.environment == 'gateway':
+   #    command = ['anon-connection-wizard']
+   #    exit_code = call(command)
 
    command = ['env', 'started_by_setup_wizard_dist=true', '/usr/libexec/setup-dist/ft_m_end']
    exit_code = call(command)
