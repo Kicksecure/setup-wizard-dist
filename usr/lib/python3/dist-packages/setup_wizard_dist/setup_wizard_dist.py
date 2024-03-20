@@ -342,13 +342,14 @@ def main():
    timer.start(500)
    timer.timeout.connect(lambda: None)
 
-   # when there is no page need showing, we simply do not start GUI to
-   # avoid an empty page
+   wizard_finished_normally = False
+
    if len(Common.wizard_steps) == 0:
       print('INFO: No page needs showing.')
    else:
       wizard = setup_wizard_dist()
       wizard.exec_()
+      wizard_finished_normally = wizard.finished_normally
 
    if Common.show_disclaimer:
       if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
@@ -362,7 +363,7 @@ def main():
       else:
          declined_legal()
 
-   if not wizard.finished_normally:
+   if not wizard_finished_normally:
       print('INFO: Canceled.')
       sys.exit(0)
 
