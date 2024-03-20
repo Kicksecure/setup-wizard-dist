@@ -368,9 +368,6 @@ def main():
       sys.exit(0)
 
    if Common.environment == 'gateway':
-      '''
-      anon-connection-wizard on Whonix-Gateway.
-      '''
       command = ['anon-connection-wizard']
       exit_code = call(command)
 
