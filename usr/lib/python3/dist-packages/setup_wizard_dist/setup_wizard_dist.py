@@ -261,7 +261,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
          self.disclaimer_2.yes_button.setText(self._('accept'))
          self.disclaimer_2.no_button.setText(self._('reject'))
 
-      self.button(QtWidgets.QWizard.CancelButton).setVisible(False)
+      self.setButtonText(self.FinishButton, "OK")
 
       self.button(QtWidgets.QWizard.BackButton).clicked.connect(self.back_button_clicked)
       self.button(QtWidgets.QWizard.NextButton).clicked.connect(self.next_button_clicked)

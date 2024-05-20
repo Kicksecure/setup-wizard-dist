@@ -89,7 +89,7 @@ setup-dist:
             <li><b>Default username:</b> <u><code>user</code></u></li>
             <li><b>Default password:</b> <u><code>changeme</code></u></li>
           </ul>
-          <p>Click the "Finish" button to run <code>systemcheck</code>.</p>
+          <p>Click the "OK" button to run <code>systemcheck</code>.</p>
 
         first_use_notice:
             <p>Welcome to This OS-Gateway!<br />
