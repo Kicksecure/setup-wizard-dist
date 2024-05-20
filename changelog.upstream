@@ -1,3 +1,15 @@
+commit 007e275f25d6b70ea01e5f5347cf4b595988382c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon May 20 13:35:46 2024 -0400
+
+    change label from "Finish" got "OK"
+
+commit 1894e3047a205ad7b68c4c7e5e0cb8bed858a60b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 20 16:17:06 2024 +0000
+
+    bumped changelog version
+
 commit 48eb83282d3f6cd576f87b2d427db969cd675acd
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 20 12:06:09 2024 -0400
