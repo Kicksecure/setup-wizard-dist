@@ -19,8 +19,7 @@ def setup_wizard_exit_if_done_file_exists():
       os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
       os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
       os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done') or
-      os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip') or
-      os.path.exists('/usr/share/qubes/marker-vm')
+      os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
    ):
       print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start setup-dist done file exists. Exiting.')
       sys.exit()
@@ -70,21 +69,20 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
        #setup_wizard_dist_start()
        #sys.exit()
 
+    ## Out-commented because nowadays Tor is enabled by default.
+    ## https://forums.whonix.org/t/connect-to-public-tor-network-by-default-avoid-anon-connection-wizard-acw-popup-at-first-boot/17848
+    ##
     ## We cannot depend on anon-connection-wizard because it would be confusing to have
     ## it installed on Whonix-Workstation.
     ## What if whonix-setup-wizard is installed but anon-connection-wizard not? Well, in that
     ## case the user should be knowing what the user is doing. Happens only in cases where
     ## the user does not use Whonix's default anon-meta-packages. In that case just error out.
-    from anon_connection_wizard import tor_status
-    tor_status = tor_status.tor_status()
+    #from anon_connection_wizard import tor_status
+    #tor_status = tor_status.tor_status()
+    #if tor_status == 'tor_enabled':
+       #print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Tor already enabled. Exiting.')
+       #sys.exit()
+    #print(tor_status)
 
-    if tor_status == 'tor_enabled':
-       print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Tor already enabled. Exiting.')
-       sys.exit()
-
-    print(tor_status)
-
-    setup_wizard_dist_start()
-else:
-    setup_wizard_exit_if_done_file_exists()
-    setup_wizard_dist_start()
+setup_wizard_exit_if_done_file_exists()
+setup_wizard_dist_start()

@@ -24,7 +24,7 @@ from guimessages.guimessage import gui_message
 
 
 def declined_legal():
-    print('WARNING: legal not accepted.')
+    print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py WARNING: legal not accepted.')
 
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Warning)
@@ -345,7 +345,8 @@ def main():
    wizard_finished_normally = False
 
    if len(Common.wizard_steps) == 0:
-      print('INFO: No page needs showing.')
+      print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: No page needs showing.')
+      wizard_finished_normally = True
    else:
       wizard = setup_wizard_dist()
       wizard.exec_()
@@ -353,18 +354,18 @@ def main():
 
    if Common.show_disclaimer:
       if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
-         print('INFO: /usr/share/whonix-setup-wizard/status-files/disclaimer.skip exists.')
+         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /usr/share/whonix-setup-wizard/status-files/disclaimer.skip exists.')
       elif os.path.isfile('/var/cache/whonix-setup-wizard/status-files/disclaimer.done'):
-         print('INFO: /var/cache/whonix-setup-wizard/status-files/disclaimer.done exists.')
+         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /var/cache/whonix-setup-wizard/status-files/disclaimer.done exists.')
       elif os.path.isfile('/usr/share/setup-dist/status-files/disclaimer.skip'):
-         print('INFO: /usr/share/setup-dist/status-files/disclaimer.skip exists.')
+         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /usr/share/setup-dist/status-files/disclaimer.skip exists.')
       elif os.path.isfile('/var/cache/setup-dist/status-files/disclaimer.done'):
-         print('INFO: /var/cache/setup-dist/status-files/disclaimer.done exists.')
+         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /var/cache/setup-dist/status-files/disclaimer.done exists.')
       else:
          declined_legal()
 
    if not wizard_finished_normally:
-      print('INFO: Canceled.')
+      print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: Canceled.')
       sys.exit(0)
 
    # if Common.environment == 'gateway':
