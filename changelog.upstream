@@ -1,3 +1,15 @@
+commit 9c4161c3e6ab7b64af46c989fd3078fc18a4effd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 14 08:38:25 2024 -0400
+
+    fix auto starting systemcheck at first boot inside Whonix-Gateway
+
+commit 1ed858497a4f8b732518b2817cc3a0552bea98bd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 23:21:00 2024 +0000
+
+    bumped changelog version
+
 commit d9db793cc29ad34ea76cd951147438a9ae3caf7b
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Jul 28 19:13:35 2024 -0400
