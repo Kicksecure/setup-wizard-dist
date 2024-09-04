@@ -28,14 +28,6 @@ if os.path.exists('/run/qubes/this-is-templatevm'):
    print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start /run/qubes/this-is-templatevm exists. Exiting.')
    sys.exit()
 
-if os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip'):
-   print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start /usr/share/whonix-setup-wizard/status-files/whonixsetup.skip exists. Exiting.')
-   sys.exit()
-
-if os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip'):
-   print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start /usr/share/setup-dist/status-files/setup-dist.skip exists. Exiting.')
-   sys.exit()
-
 if os.path.exists('/usr/share/anon-ws-base-files/workstation'):
    if os.path.exists('/usr/share/whonix-setup-wizard/status-files/first_use_check.skip'):
       ## Qubes-Whonix only.
