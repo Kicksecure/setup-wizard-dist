@@ -22,29 +22,24 @@ if os.path.exists('/run/qubes/this-is-templatevm'):
    print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start /run/qubes/this-is-templatevm exists. Exiting.')
    sys.exit()
 
-if os.path.exists('/usr/share/anon-ws-base-files/workstation'):
-   if os.path.exists('/usr/share/whonix-setup-wizard/status-files/first_use_check.skip'):
+if os.path.exists('/usr/share/qubes/marker-vm'):
+   ## Qubes detected.
+   if os.path.exists('/usr/share/anon-ws-base-files/workstation'):
       ## Qubes-Whonix only.
       ## Do not start setup-wizard-dist in Qubes-Whonix-Workstation by default.
-      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start workstation detected and /usr/share/whonix-setup-wizard/status-files/first_use_check.skip exists. Exiting.')
+      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Qubes-Whonix-Workstation detected. Exiting.')
       sys.exit()
-   if os.path.exists('/usr/share/setup-dist/status-files/first_use_check.skip'):
+   if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
       ## Qubes-Whonix only.
-      ## Do not start setup-wizard-dist in Qubes-Whonix-Workstation by default.
-      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start workstation detected and /usr/share/setup-dist/status-files/first_use_check.skip exists. Exiting.')
-      sys.exit()
-
-if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
-    ## Qubes-Whonix only.
-    ## Display alert that 'whonix-tor-disable' service flag is set and it will need to
-    ## to manually unset if user wants to be able to boot with Tor enabled.
-    ## TODO: Don't depend on qubes-whonix package / 'alert' script by qubes-whonix package.
-    ##       Abolish 'alert' script. Merge into systemcheck and/or anon-connection-wizard.
-    ##       https://phabricator.whonix.org/T656
-    if os.path.exists('/run/qubes-service/whonix-tor-disable'):
-        command = '/usr/lib/qubes-whonix/alert tor-disabled /usr/lib/qubes-whonix/messages.yaml'
-        call(command, shell = True)
-        sys.exit()
+      ## Display alert that 'whonix-tor-disable' service flag is set and it will need to
+      ## to manually unset if user wants to be able to boot with Tor enabled.
+      ## TODO: Don't depend on qubes-whonix package / 'alert' script by qubes-whonix package.
+      ##       Abolish 'alert' script. Merge into systemcheck and/or anon-connection-wizard.
+      ##       https://phabricator.whonix.org/T656
+      if os.path.exists('/run/qubes-service/whonix-tor-disable'):
+         command = '/usr/lib/qubes-whonix/alert tor-disabled /usr/lib/qubes-whonix/messages.yaml'
+         call(command, shell = True)
+         sys.exit()
 
 print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
