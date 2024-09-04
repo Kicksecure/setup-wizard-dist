@@ -14,15 +14,14 @@ def setup_wizard_dist_start():
    command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
    call(command, shell=True)
 
-def setup_wizard_exit_if_done_file_exists():
-   if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
-      os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
-      os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
-      os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done') or
-      os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
-   ):
-      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start setup-dist done file exists. Exiting.')
-      sys.exit()
+if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
+   os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
+   os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
+   os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done') or
+   os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
+):
+   print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start setup-dist done file exists. Exiting.')
+   sys.exit()
 
 if os.path.exists('/run/qubes/this-is-templatevm'):
    print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start /run/qubes/this-is-templatevm exists. Exiting.')
