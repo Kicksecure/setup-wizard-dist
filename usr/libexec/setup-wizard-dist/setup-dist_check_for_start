@@ -19,7 +19,7 @@ if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
    sys.exit()
 
 if os.path.exists('/run/qubes/this-is-templatevm'):
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: /run/qubes/this-is-templatevm exists. Exiting.')
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: File /run/qubes/this-is-templatevm exists. Exiting.')
    sys.exit()
 
 if os.path.exists('/usr/share/qubes/marker-vm'):
