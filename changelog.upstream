@@ -1,3 +1,95 @@
+commit ee6dc72c7b75966f25d4380b6a9b41cbb486b41b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:29:07 2024 -0400
+
+    comments
+
+commit c8e8f06411dc783c104762a76abf0b1865697ab1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:13:29 2024 -0400
+
+    code simplification
+
+commit bacfa32a5d7c71a3144f16a787a1d841061e05aa
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:12:46 2024 -0400
+
+    output
+
+commit b1b8e901a4a8ae704c4f2efed5d402733c612631
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:12:20 2024 -0400
+
+    refactoring
+
+commit f50d44f7b0393512e19bedfa669e7baac34d9772
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:09:25 2024 -0400
+
+    output
+
+commit 14e5c194fa17c3b3d8fbee6783048019c34b3383
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:08:26 2024 -0400
+
+    output
+
+commit 020e2343a36f78d59d3e7d03260f36a17a908cf8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:06:09 2024 -0400
+
+    skip setup-wizard-dist (systemcheck autostart at first boot) in Kicksecure-Qubes by default
+    
+    (as this would lead to too many systemcheck runs at Qubes VM first starts)
+
+commit 68aeb4b97bafcac4b1a8a28da28775f071f39ddd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 08:05:12 2024 -0400
+
+    refactoring
+
+commit b54624cd93ca360fd8b6e805fa52bc4a84138da6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 07:58:35 2024 -0400
+
+    cleanup
+
+commit 84a0299334d8d6b6868c961f9a034090fb719d35
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 07:50:30 2024 -0400
+
+    output
+
+commit 6df4a708e7f4d95259f5beb28170325b818b5144
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 07:49:06 2024 -0400
+
+    code simplification
+
+commit 34c85246555efd069ecf225c31f1fab7e3d1313a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 07:48:35 2024 -0400
+
+    fix
+
+commit a85d9fcd5ec0e7dc08582bd62e86c388ef9ecc53
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 07:48:02 2024 -0400
+
+    code simplification
+
+commit a583bbe74ae1e137b63bdb5f84e85a6b067bec8f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 4 07:46:32 2024 -0400
+
+    code simplification
+
+commit 61c620f224504503e2ec5390e169112508fe335a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 14 12:59:01 2024 +0000
+
+    bumped changelog version
+
 commit 9c4161c3e6ab7b64af46c989fd3078fc18a4effd
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Aug 14 08:38:25 2024 -0400
