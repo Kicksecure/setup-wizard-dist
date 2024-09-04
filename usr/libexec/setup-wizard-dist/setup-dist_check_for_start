@@ -1,8 +1,18 @@
 #!/usr/bin/python3 -u
 
 ## Copyright (C) 2014 troubadour <trobador@riseup.net>
-## Copyright (C) 2014 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## Copyright (C) 2014 - 2024 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
+
+## Decides to autostart setup-wizard-dist or not.
+## - Do not start when a done or skip file exists.
+## - Do not start in Kicksecure-Qubes.
+## - Do not start in Qubes-Whonix-Workstation.
+## - Do not start in a Qubes Template.
+## - Start in Kicksecure (non-Qubes).
+## - Start in Qubes-Whonix-Gateway.
+## - Start in Non-Qubes-Whonix-Gateway.
+## - Start in Non-Qubes-Whonix-Workstation.
 
 import sys
 import os
