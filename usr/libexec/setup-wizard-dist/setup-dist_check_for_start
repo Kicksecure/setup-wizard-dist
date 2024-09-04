@@ -70,5 +70,6 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
        #sys.exit()
     #print(tor_status)
 
+print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
 call(command, shell=True)
