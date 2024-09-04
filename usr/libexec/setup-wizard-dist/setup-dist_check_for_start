@@ -9,11 +9,6 @@ import os
 import time
 from subprocess import call
 
-
-def setup_wizard_dist_start():
-   command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
-   call(command, shell=True)
-
 if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
    os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
    os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
@@ -75,4 +70,5 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
        #sys.exit()
     #print(tor_status)
 
-setup_wizard_dist_start()
+command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
+call(command, shell=True)
