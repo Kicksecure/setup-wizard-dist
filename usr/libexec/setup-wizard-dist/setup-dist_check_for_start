@@ -25,15 +25,12 @@ if os.path.exists('/run/qubes/this-is-templatevm'):
 if os.path.exists('/usr/share/qubes/marker-vm'):
    ## Qubes detected.
    if os.path.exists('/usr/share/kicksecure/marker'):
-      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Kicksecure-Qubes detected. Exiting.')
+      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Kicksecure-Qubes detected. Do not start setup-wizard-dist in Kicksecure-Qubes by default. Exiting.')
       sys.exit()
    if os.path.exists('/usr/share/anon-ws-base-files/workstation'):
-      ## Qubes-Whonix only.
-      ## Do not start setup-wizard-dist in Qubes-Whonix-Workstation by default.
-      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Qubes-Whonix-Workstation detected. Exiting.')
+      print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Qubes-Whonix-Workstation detected. Do not start setup-wizard-dist in Qubes-Whonix-Workstation by default. Exiting.')
       sys.exit()
    if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
-      ## Qubes-Whonix only.
       ## Display alert that 'whonix-tor-disable' service flag is set and it will need to
       ## to manually unset if user wants to be able to boot with Tor enabled.
       ## TODO: Don't depend on qubes-whonix package / 'alert' script by qubes-whonix package.
