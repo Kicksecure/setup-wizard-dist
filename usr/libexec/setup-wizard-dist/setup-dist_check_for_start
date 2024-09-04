@@ -35,15 +35,8 @@ if os.path.exists('/usr/share/qubes/marker-vm'):
          call(command, shell = True)
          sys.exit()
    else:
-      if os.path.exists('/usr/share/kicksecure/marker'):
-         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Kicksecure-Qubes detected. Do not start setup-wizard-dist in Kicksecure-Qubes by default. Exiting.')
-         sys.exit()
-      elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
-         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Workstation detected. Do not start setup-wizard-dist in Qubes-Whonix-Workstation by default. Exiting.')
-         sys.exit()
-      else:
-         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
-         sys.exit()
+      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
+      sys.exit()
 
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
