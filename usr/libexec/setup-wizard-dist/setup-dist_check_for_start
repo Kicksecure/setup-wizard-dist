@@ -75,5 +75,4 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
        #sys.exit()
     #print(tor_status)
 
-setup_wizard_exit_if_done_file_exists()
 setup_wizard_dist_start()
