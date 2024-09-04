@@ -46,30 +46,6 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
         call(command, shell = True)
         sys.exit()
 
-    ## TODO: Make sure systemd unit tor@default starts before /etc/xdg/autostart/whonix-setup-wizard.desktop
-    #command = 'systemctl --no-pager status tor@default'
-    #tor_status_code = call(command, shell=True)
-    #if tor_status_code != 0:
-       #print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Starting whonix-setup-wizard because Tor systemd unit is not running. \
-#This could be because of a Tor configuration issue.')
-       #setup_wizard_dist_start()
-       #sys.exit()
-
-    ## Out-commented because nowadays Tor is enabled by default.
-    ## https://forums.whonix.org/t/connect-to-public-tor-network-by-default-avoid-anon-connection-wizard-acw-popup-at-first-boot/17848
-    ##
-    ## We cannot depend on anon-connection-wizard because it would be confusing to have
-    ## it installed on Whonix-Workstation.
-    ## What if whonix-setup-wizard is installed but anon-connection-wizard not? Well, in that
-    ## case the user should be knowing what the user is doing. Happens only in cases where
-    ## the user does not use Whonix's default anon-meta-packages. In that case just error out.
-    #from anon_connection_wizard import tor_status
-    #tor_status = tor_status.tor_status()
-    #if tor_status == 'tor_enabled':
-       #print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start Tor already enabled. Exiting.')
-       #sys.exit()
-    #print(tor_status)
-
 print('usr/libexec/setup-wizard-dist/setup-dist_check_for_start executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
 call(command, shell=True)
