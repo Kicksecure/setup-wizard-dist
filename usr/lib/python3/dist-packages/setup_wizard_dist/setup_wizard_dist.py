@@ -333,6 +333,10 @@ def signal_handler(sig, frame):
 
 
 def main():
+   if os.geteuid() == 0:
+      print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py ERROR: Do not run with sudo / as root!')
+      sys.exit(1)
+
    app = QtWidgets.QApplication(sys.argv)
 
    signal.signal(signal.SIGINT, signal_handler)
