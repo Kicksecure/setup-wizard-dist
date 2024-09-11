@@ -48,6 +48,14 @@ if os.path.exists('/usr/share/qubes/marker-vm'):
       print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
       sys.exit()
 
+if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
+elif os.path.exists('/usr/share/anon-gw-base-files/gateway'):
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
+else:
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway nor Whonix-Workstation detected. Exiting.')
+   sys.exit()
+
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
 call(command, shell=True)
