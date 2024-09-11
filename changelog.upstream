@@ -1,3 +1,15 @@
+commit 15e094d9bf7ef0cc48e1360ce754a3a153c2993c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 11 04:51:44 2024 -0400
+
+    no longer auto start setup-wizard-dist on Kicksecure
+
+commit f398caed0cd5ecfcd12396c713aeae4686e5d153
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 8 17:41:55 2024 +0000
+
+    bumped changelog version
+
 commit 414a939744edb05f46611531d82061b93a5f815d
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Sep 8 12:53:32 2024 -0400
