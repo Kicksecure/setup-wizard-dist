@@ -50,7 +50,7 @@ if os.path.exists('/usr/share/qubes/marker-vm'):
 
 if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
-elif os.path.exists('/usr/share/anon-gw-base-files/gateway'):
+elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
 else:
    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway nor Whonix-Workstation detected. Exiting.')
