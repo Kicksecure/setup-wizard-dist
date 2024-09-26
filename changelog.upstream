@@ -1,3 +1,17 @@
+commit d31b0a45b440145322f5bd8acf4a6ec3485e66bb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Sep 26 07:09:38 2024 -0400
+
+    fix detection of Whonix-Workstation
+    
+    therefore fix autostart of setup-wizard-dist inside Whonix-Workstation
+
+commit 338e9f4842136590bd77c3f70b14ee11e2d964e3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 11 19:58:49 2024 +0000
+
+    bumped changelog version
+
 commit 15e094d9bf7ef0cc48e1360ce754a3a153c2993c
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Sep 11 04:51:44 2024 -0400
