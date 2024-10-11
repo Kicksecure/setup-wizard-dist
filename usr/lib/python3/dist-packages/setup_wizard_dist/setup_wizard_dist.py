@@ -199,7 +199,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
         super(setup_wizard_dist, self).done(result)
 
     def setupUi(self):
-      self.setWindowIcon(QtGui.QIcon("/usr/share/icons/icon-pack-dist/whonix.ico"))
+      self.setWindowIcon(QtGui.QIcon("/usr/share/icons/gnome/24x24/status/info.png"))
 
       if Common.environment == 'machine':
          self.setWindowTitle('Kicksecure Setup Wizard')
