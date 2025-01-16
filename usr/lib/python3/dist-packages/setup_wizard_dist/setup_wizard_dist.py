@@ -71,12 +71,20 @@ class Common:
                        not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
                        not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip') and
                        not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip') and
-                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done')
+                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done') and
+                       not os.path.exists(str(pathlib.Path.home()) + '/.local/share/setup-dist/status-files/setup-dist.done')
                        )
 
-    if(show_finish_page):
-        wizard_steps.append('finish_page')
+    in_sudoless_mode = False
 
+    if not os.access('/usr/bin/sudo', os.X_OK):
+        in_sudoless_mode = True
+
+    if(show_finish_page):
+        if in_sudoless_mode:
+            wizard_steps.append('finish_page_sudoless')
+        else:
+            wizard_steps.append('finish_page')
 
 class DisclaimerPage1(QtWidgets.QWizardPage):
     def __init__(self):
@@ -111,8 +119,10 @@ class DisclaimerPage1(QtWidgets.QWizardPage):
             return self.steps.index('disclaimer_2')
         # Not understood
         elif self.no_button.isChecked():
-            return self.steps.index('finish_page')
-
+            if Common.in_sudoless_mode:
+                return self.steps.index('finish_page_sudoless')
+            else:
+                return self.steps.index('finish_page')
 
 class DisclaimerPage2(QtWidgets.QWizardPage):
     def __init__(self):
@@ -144,7 +154,10 @@ class DisclaimerPage2(QtWidgets.QWizardPage):
         self.setLayout(self.layout)
 
     def nextId(self):
-        return self.steps.index('finish_page')
+        if Common.in_sudoless_mode:
+            return self.steps.index('finish_page_sudoless')
+        else:
+            return self.steps.index('finish_page')
 
 
 class FinishPage(QtWidgets.QWizardPage):
@@ -235,7 +248,10 @@ class setup_wizard_dist(QtWidgets.QWizard):
       self.setPalette(palette)
 
       self.finish_page.icon.setPixmap(QtGui.QPixmap('/usr/share/icons/oxygen/48x48/status/task-complete.png'))
-      self.finish_page.text.setText(self._('finish_page'))
+      if Common.in_sudoless_mode:
+         self.finish_page.text.setText(self._('finish_page_sudoless'))
+      else:
+         self.finish_page.text.setText(self._('finish_page'))
 
       disclaimer_message = ""
       disclaimer_message += self._('disclaimer_1')
@@ -299,7 +315,12 @@ class setup_wizard_dist(QtWidgets.QWizard):
       Options (like button states, window size changes...) are set here.
       """
 
-      if self.currentId() == self.steps.index('finish_page'):
+      if Common.in_sudoless_mode:
+            finish_page_idx = self.steps.index('finish_page_sudoless')
+      else:
+            finish_page_idx = self.steps.index('finish_page')
+
+      if self.currentId() == finish_page_idx:
             if Common.show_disclaimer:
                # Disclaimer page 1 not understood -> leave
                if self.disclaimer_1.no_button.isChecked():
@@ -318,7 +339,10 @@ class setup_wizard_dist(QtWidgets.QWizard):
             if self.env == 'workstation':
                self.finish_page.icon.setPixmap(QtGui.QPixmap( \
                '/usr/share/icons/oxygen/48x48/status/task-complete.png'))
-               self.finish_page.text.setText(self._('finish_page'))
+               if Common.in_sudoless_mode:
+                  self.finish_page.text.setText(self._('finish_page_sudoless'))
+               else:
+                  self.finish_page.text.setText(self._('finish_page'))
 
     def back_button_clicked(self):
         if Common.show_disclaimer:
