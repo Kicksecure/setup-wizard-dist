@@ -1,8 +1,39 @@
+commit f4be501d8e50146ad94a54b32712b8ea7d8fabe9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 6 10:47:40 2025 -0500
+
+    autopep
+
+commit c400b0a77f2cb967dc7042767d8240a4b0729abb
+Merge: 9c970a3 a2f72bd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 6 10:37:28 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/sudoless'
+
+commit 9c970a31d2c0ab0c6f3aa3d2d12e1341ee13e8c2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 23 16:29:57 2025 +0000
+
+    bumped changelog version
+
 commit dae2c60741158311b19a8230458c93bb23907397
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jan 23 11:12:32 2025 -0500
 
     copyright
+
+commit a2f72bdd7e04fb46727624fbc6415b8d01212743
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Jan 16 01:13:31 2025 -0600
+
+    Normalize indentation to four spaces
+
+commit 109efe8c0f8ea642da656b3c94ec456baba2bfb0
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Jan 16 01:06:30 2025 -0600
+
+    Add handling for sudoless mode
 
 commit 7117d751915187b2eae979044f033d8dbebc394d
 Author: Patrick Schleizer <adrelanos@whonix.org>
