@@ -91,16 +91,6 @@ setup-dist:
           </ul>
           <p>Click the "OK" button to run <code>systemcheck</code>.</p>
 
-        finish_page_sudoless: |
-          <p>The <code>setup-wizard-dist</code> has been successfully completed.</p>
-          <p>Please note the following default credentials:</p>
-          <ul>
-            <li><b>Default username:</b> <u><code>user</code></u></li>
-            <li><b>Default password:</b> No password required. (Passwordless login.)</li>
-          </ul>
-          <p>You may wish to reboot the system into "PERSISTENT mode SYSMAINT" and run <code>systemcheck</code>.</p>
-          <p>Click the "OK" button to exit.</p>
-
         first_use_notice:
             <p>Welcome to This OS-Gateway!<br />
             <br />
