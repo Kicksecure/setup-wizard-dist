@@ -1,3 +1,22 @@
+commit b37304988cdb9baee535567fa7abbe12973dda4f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 6 12:37:29 2025 -0500
+
+    remove reverted finish_page_sudoless
+
+commit 1a01b6a7c621b12d0fac943349f6911a7555ad0e
+Merge: 2daebc9 c9ec529
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 6 12:33:52 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/fix-spacing'
+
+commit 2daebc9071e87de5155780386673384608cbd1e0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 6 16:22:36 2025 +0000
+
+    bumped changelog version
+
 commit f4be501d8e50146ad94a54b32712b8ea7d8fabe9
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Feb 6 10:47:40 2025 -0500
@@ -22,6 +41,12 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jan 23 11:12:32 2025 -0500
 
     copyright
+
+commit c9ec529ea49146d453517256f4a6f33df75062f6
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Jan 21 22:14:17 2025 -0600
+
+    Normalize setup-wizard-dist.py spacing to four spaces
 
 commit a2f72bdd7e04fb46727624fbc6415b8d01212743
 Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
