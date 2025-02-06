@@ -29,7 +29,8 @@ def declined_legal():
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Warning)
     msg.setWindowTitle("Restricted Access")
-    msg.setText("Because the agreements have been declined, you are prohibited from using this software.")
+    msg.setText(
+        "Because the agreements have been declined, you are prohibited from using this software.")
     msg.setStandardButtons(QMessageBox.Ok)
     msg.exec_()
 
@@ -40,7 +41,7 @@ class Common:
     '''
     Variables and constants used through all the classes
     '''
-    translations_path ='/usr/share/translations/setup-wizard-dist.yaml'
+    translations_path = '/usr/share/translations/setup-wizard-dist.yaml'
     wizard_steps = []
 
     if os.path.isfile('/usr/share/anon-gw-base-files/gateway'):
@@ -51,7 +52,8 @@ class Common:
         environment = 'machine'
 
     if not os.path.exists('/var/cache/setup-dist/status-files'):
-        pathlib.Path("/var/cache/setup-dist/status-files").mkdir(parents=True, exist_ok=True)
+        pathlib.Path(
+            "/var/cache/setup-dist/status-files").mkdir(parents=True, exist_ok=True)
 
     show_disclaimer = (not os.path.exists('/var/cache/whonix-setup-wizard/status-files/disclaimer.done') and
                        not os.path.exists('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip') and
@@ -59,20 +61,20 @@ class Common:
                        not os.path.exists('/usr/share/setup-dist/status-files/disclaimer.skip')
                       )
 
-    ## Disable disclaimer.
+    # Disable disclaimer.
     show_disclaimer = False
 
-    if(show_disclaimer):
+    if (show_disclaimer):
         wizard_steps.append('disclaimer_1')
         wizard_steps.append('disclaimer_2')
 
     show_finish_page = (not os.path.exists('/var/cache/whonix-setup-wizard/status-files/finish_page.done') and
-                       not os.path.exists('/usr/share/whonix-setup-wizard/status-files/finish_page.skip') and
-                       not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
-                       not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip') and
-                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip') and
-                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done') and
-                       not os.path.exists(str(pathlib.Path.home()) + '/.local/share/setup-dist/status-files/setup-dist.done')
+                        not os.path.exists('/usr/share/whonix-setup-wizard/status-files/finish_page.skip') and
+                        not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
+                        not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip') and
+                        not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip') and
+                        not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done') and
+                        not os.path.exists(str(pathlib.Path.home()) + '/.local/share/setup-dist/status-files/setup-dist.done')
                        )
 
     in_sudoless_mode = False
@@ -80,11 +82,12 @@ class Common:
     if not os.access('/usr/bin/sudo', os.X_OK):
         in_sudoless_mode = True
 
-    if(show_finish_page):
+    if (show_finish_page):
         if in_sudoless_mode:
             wizard_steps.append('finish_page_sudoless')
         else:
             wizard_steps.append('finish_page')
+
 
 class DisclaimerPage1(QtWidgets.QWizardPage):
     def __init__(self):
@@ -103,7 +106,7 @@ class DisclaimerPage1(QtWidgets.QWizardPage):
 
     def setupUi(self):
         self.text.setFrameShape(QtWidgets.QFrame.Panel)
-        self.text.setAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.text.setAlignment(QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
 
         self.accept_group.setMinimumSize(0, 60)
         self.yes_button.setGeometry(QtCore.QRect(30, 10, 300, 21))
@@ -124,6 +127,7 @@ class DisclaimerPage1(QtWidgets.QWizardPage):
             else:
                 return self.steps.index('finish_page')
 
+
 class DisclaimerPage2(QtWidgets.QWizardPage):
     def __init__(self):
         super(DisclaimerPage2, self).__init__()
@@ -141,7 +145,7 @@ class DisclaimerPage2(QtWidgets.QWizardPage):
         self.setupUi()
 
     def setupUi(self):
-        self.text.setAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.text.setAlignment(QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
         self.text.setFrameShape(QtWidgets.QFrame.Panel)
 
         self.accept_group.setMinimumSize(0, 60)
@@ -171,11 +175,11 @@ class FinishPage(QtWidgets.QWizardPage):
         self.setupUi()
 
     def setupUi(self):
-        self.icon.setAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.icon.setAlignment(QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
         self.icon.setMinimumSize(50, 0)
 
         self.text.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.text.setAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.text.setAlignment(QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
 
         self.layout.addWidget(self.icon, 0, 0, 1, 1)
         self.layout.addWidget(self.text, 0, 1, 1, 1)
@@ -212,7 +216,8 @@ class setup_wizard_dist(QtWidgets.QWizard):
         super(setup_wizard_dist, self).done(result)
 
     def setupUi(self):
-        self.setWindowIcon(QtGui.QIcon("/usr/share/icons/gnome/24x24/status/info.png"))
+        self.setWindowIcon(QtGui.QIcon(
+            "/usr/share/icons/gnome/24x24/status/info.png"))
 
         if Common.environment == 'machine':
             self.setWindowTitle('Kicksecure Setup Wizard')
@@ -247,7 +252,8 @@ class setup_wizard_dist(QtWidgets.QWizard):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
         self.setPalette(palette)
 
-        self.finish_page.icon.setPixmap(QtGui.QPixmap('/usr/share/icons/oxygen/48x48/status/task-complete.png'))
+        self.finish_page.icon.setPixmap(QtGui.QPixmap(
+            '/usr/share/icons/oxygen/48x48/status/task-complete.png'))
         if Common.in_sudoless_mode:
             self.finish_page.text.setText(self._('finish_page_sudoless'))
         else:
@@ -279,8 +285,10 @@ class setup_wizard_dist(QtWidgets.QWizard):
 
         self.setButtonText(self.FinishButton, "OK")
 
-        self.button(QtWidgets.QWizard.BackButton).clicked.connect(self.back_button_clicked)
-        self.button(QtWidgets.QWizard.NextButton).clicked.connect(self.next_button_clicked)
+        self.button(QtWidgets.QWizard.BackButton).clicked.connect(
+            self.back_button_clicked)
+        self.button(QtWidgets.QWizard.NextButton).clicked.connect(
+            self.next_button_clicked)
 
         if not Common.show_disclaimer:
             self.resize(580, 390)
@@ -332,15 +340,17 @@ class setup_wizard_dist(QtWidgets.QWizard):
                     self.hide()
                     declined_legal()
 
-                file_path = pathlib.Path('/var/cache/setup-dist/status-files/disclaimer.done')
+                file_path = pathlib.Path(
+                    '/var/cache/setup-dist/status-files/disclaimer.done')
                 if not os.path.exists(file_path):
                     file_path.touch(exist_ok=True)
 
             if self.env == 'workstation':
-                self.finish_page.icon.setPixmap(QtGui.QPixmap( \
-                '/usr/share/icons/oxygen/48x48/status/task-complete.png'))
+                self.finish_page.icon.setPixmap(QtGui.QPixmap(
+                    '/usr/share/icons/oxygen/48x48/status/task-complete.png'))
                 if Common.in_sudoless_mode:
-                    self.finish_page.text.setText(self._('finish_page_sudoless'))
+                    self.finish_page.text.setText(
+                        self._('finish_page_sudoless'))
                 else:
                     self.finish_page.text.setText(self._('finish_page'))
 
@@ -400,8 +410,10 @@ def main():
     #    command = ['anon-connection-wizard']
     #    exit_code = call(command)
 
-    command = ['env', 'started_by_setup_wizard_dist=true', '/usr/libexec/setup-dist/ft_m_end']
+    command = ['env', 'started_by_setup_wizard_dist=true',
+               '/usr/libexec/setup-dist/ft_m_end']
     exit_code = call(command)
+
 
 if __name__ == "__main__":
     main()
