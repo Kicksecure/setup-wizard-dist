@@ -71,12 +71,20 @@ class Common:
                        not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
                        not os.path.exists('/usr/share/setup-dist/status-files/finish_page.skip') and
                        not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip') and
-                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done')
+                       not os.path.exists('/usr/share/setup-dist/status-files/setup-dist.done') and
+                       not os.path.exists(str(pathlib.Path.home()) + '/.local/share/setup-dist/status-files/setup-dist.done')
                        )
 
-    if(show_finish_page):
-        wizard_steps.append('finish_page')
+    in_sudoless_mode = False
 
+    if not os.access('/usr/bin/sudo', os.X_OK):
+        in_sudoless_mode = True
+
+    if(show_finish_page):
+        if in_sudoless_mode:
+            wizard_steps.append('finish_page_sudoless')
+        else:
+            wizard_steps.append('finish_page')
 
 class DisclaimerPage1(QtWidgets.QWizardPage):
     def __init__(self):
@@ -111,8 +119,10 @@ class DisclaimerPage1(QtWidgets.QWizardPage):
             return self.steps.index('disclaimer_2')
         # Not understood
         elif self.no_button.isChecked():
-            return self.steps.index('finish_page')
-
+            if Common.in_sudoless_mode:
+                return self.steps.index('finish_page_sudoless')
+            else:
+                return self.steps.index('finish_page')
 
 class DisclaimerPage2(QtWidgets.QWizardPage):
     def __init__(self):
@@ -144,7 +154,10 @@ class DisclaimerPage2(QtWidgets.QWizardPage):
         self.setLayout(self.layout)
 
     def nextId(self):
-        return self.steps.index('finish_page')
+        if Common.in_sudoless_mode:
+            return self.steps.index('finish_page_sudoless')
+        else:
+            return self.steps.index('finish_page')
 
 
 class FinishPage(QtWidgets.QWizardPage):
@@ -182,11 +195,11 @@ class setup_wizard_dist(QtWidgets.QWizard):
         self.env = Common.environment
 
         if Common.show_disclaimer:
-               self.disclaimer_1 = DisclaimerPage1()
-               self.addPage(self.disclaimer_1)
+            self.disclaimer_1 = DisclaimerPage1()
+            self.addPage(self.disclaimer_1)
 
-               self.disclaimer_2 = DisclaimerPage2()
-               self.addPage(self.disclaimer_2)
+            self.disclaimer_2 = DisclaimerPage2()
+            self.addPage(self.disclaimer_2)
 
         self.finish_page = FinishPage()
         self.addPage(self.finish_page)
@@ -199,75 +212,78 @@ class setup_wizard_dist(QtWidgets.QWizard):
         super(setup_wizard_dist, self).done(result)
 
     def setupUi(self):
-      self.setWindowIcon(QtGui.QIcon("/usr/share/icons/gnome/24x24/status/info.png"))
+        self.setWindowIcon(QtGui.QIcon("/usr/share/icons/gnome/24x24/status/info.png"))
 
-      if Common.environment == 'machine':
-         self.setWindowTitle('Kicksecure Setup Wizard')
-      else:
-         self.setWindowTitle('Whonix Setup Wizard')
+        if Common.environment == 'machine':
+            self.setWindowTitle('Kicksecure Setup Wizard')
+        else:
+            self.setWindowTitle('Whonix Setup Wizard')
 
-      screen_resolution = QtWidgets.QDesktopWidget().screenGeometry()
-      screen_height = screen_resolution.height()
-      screen_width = screen_resolution.width()
+        screen_resolution = QtWidgets.QDesktopWidget().screenGeometry()
+        screen_height = screen_resolution.height()
+        screen_width = screen_resolution.width()
 
-      window_width_percentage = 0.8
-      window_height_percentage = 0.8
+        window_width_percentage = 0.8
+        window_height_percentage = 0.8
 
-      # Calculate window dimensions
-      self.window_width = int(screen_width * window_width_percentage)
-      self.window_height = int(screen_height * window_height_percentage)
+        # Calculate window dimensions
+        self.window_width = int(screen_width * window_width_percentage)
+        self.window_height = int(screen_height * window_height_percentage)
 
-      # Resize the window
-      self.resize(self.window_width, self.window_height)
+        # Resize the window
+        self.resize(self.window_width, self.window_height)
 
-      # We use QTextBrowser with a white background.
-      # Set a default (transparent) background.
-      palette = QtGui.QPalette()
-      brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 0))
-      brush.setStyle(QtCore.Qt.SolidPattern)
-      palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
-      brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 0))
-      brush.setStyle(QtCore.Qt.SolidPattern)
-      palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
-      brush = QtGui.QBrush(QtGui.QColor(244, 244, 244))
-      brush.setStyle(QtCore.Qt.SolidPattern)
-      palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
-      self.setPalette(palette)
+        # We use QTextBrowser with a white background.
+        # Set a default (transparent) background.
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(244, 244, 244))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        self.setPalette(palette)
 
-      self.finish_page.icon.setPixmap(QtGui.QPixmap('/usr/share/icons/oxygen/48x48/status/task-complete.png'))
-      self.finish_page.text.setText(self._('finish_page'))
+        self.finish_page.icon.setPixmap(QtGui.QPixmap('/usr/share/icons/oxygen/48x48/status/task-complete.png'))
+        if Common.in_sudoless_mode:
+            self.finish_page.text.setText(self._('finish_page_sudoless'))
+        else:
+            self.finish_page.text.setText(self._('finish_page'))
 
-      disclaimer_message = ""
-      disclaimer_message += self._('disclaimer_1')
+        disclaimer_message = ""
+        disclaimer_message += self._('disclaimer_1')
 
-      if Common.environment == 'machine':
-         disclaimer_message += self._('disclaimer_2_kicksecure')
-      else:
-         disclaimer_message += self._('disclaimer_2_whonix')
+        if Common.environment == 'machine':
+            disclaimer_message += self._('disclaimer_2_kicksecure')
+        else:
+            disclaimer_message += self._('disclaimer_2_whonix')
 
-      disclaimer_message += self._('disclaimer_3')
+        disclaimer_message += self._('disclaimer_3')
 
-      if Common.environment == 'machine':
-         disclaimer_message += self._('disclaimer_4_kicksecure')
-      else:
-         disclaimer_message += self._('disclaimer_4_whonix')
+        if Common.environment == 'machine':
+            disclaimer_message += self._('disclaimer_4_kicksecure')
+        else:
+            disclaimer_message += self._('disclaimer_4_whonix')
 
-      if Common.show_disclaimer:
-         self.disclaimer_1.text.setText(disclaimer_message)
-         self.disclaimer_1.yes_button.setText(self._('accept'))
-         self.disclaimer_1.no_button.setText(self._('reject'))
+        if Common.show_disclaimer:
+            self.disclaimer_1.text.setText(disclaimer_message)
+            self.disclaimer_1.yes_button.setText(self._('accept'))
+            self.disclaimer_1.no_button.setText(self._('reject'))
 
-         self.disclaimer_2.text.setText(self._('disclaimer_page_two'))
-         self.disclaimer_2.yes_button.setText(self._('accept'))
-         self.disclaimer_2.no_button.setText(self._('reject'))
+            self.disclaimer_2.text.setText(self._('disclaimer_page_two'))
+            self.disclaimer_2.yes_button.setText(self._('accept'))
+            self.disclaimer_2.no_button.setText(self._('reject'))
 
-      self.setButtonText(self.FinishButton, "OK")
+        self.setButtonText(self.FinishButton, "OK")
 
-      self.button(QtWidgets.QWizard.BackButton).clicked.connect(self.back_button_clicked)
-      self.button(QtWidgets.QWizard.NextButton).clicked.connect(self.next_button_clicked)
+        self.button(QtWidgets.QWizard.BackButton).clicked.connect(self.back_button_clicked)
+        self.button(QtWidgets.QWizard.NextButton).clicked.connect(self.next_button_clicked)
 
-      if not Common.show_disclaimer:
-         self.resize(580, 390)
+        if not Common.show_disclaimer:
+            self.resize(580, 390)
 
     # called by button toggled signal.
     def set_next_button_state(self, state):
@@ -288,37 +304,45 @@ class setup_wizard_dist(QtWidgets.QWizard):
         self.move(frame_gm.topLeft())
 
     def next_button_clicked(self):
-      """
-      Next button slot.
-      The commands cannot be implemented in the wizard's nextId() function,
-      as it is polled by the event handler on the creation of the page.
-      Depending on the checkbox states, the commands would be run when the
-      page is loaded.
-      Those button_clicked functions are called once, when the user clicks
-      the corresponding button.
-      Options (like button states, window size changes...) are set here.
-      """
+        """
+        Next button slot.
+        The commands cannot be implemented in the wizard's nextId() function,
+        as it is polled by the event handler on the creation of the page.
+        Depending on the checkbox states, the commands would be run when the
+        page is loaded.
+        Those button_clicked functions are called once, when the user clicks
+        the corresponding button.
+        Options (like button states, window size changes...) are set here.
+        """
 
-      if self.currentId() == self.steps.index('finish_page'):
+        if Common.in_sudoless_mode:
+            finish_page_idx = self.steps.index('finish_page_sudoless')
+        else:
+            finish_page_idx = self.steps.index('finish_page')
+
+        if self.currentId() == finish_page_idx:
             if Common.show_disclaimer:
-               # Disclaimer page 1 not understood -> leave
-               if self.disclaimer_1.no_button.isChecked():
-                  self.hide()
-                  declined_legal()
+                # Disclaimer page 1 not understood -> leave
+                if self.disclaimer_1.no_button.isChecked():
+                    self.hide()
+                    declined_legal()
 
-               # Disclaimer page 2 not understood -> leave
-               if self.disclaimer_2.no_button.isChecked():
-                  self.hide()
-                  declined_legal()
+                # Disclaimer page 2 not understood -> leave
+                if self.disclaimer_2.no_button.isChecked():
+                    self.hide()
+                    declined_legal()
 
-               file_path = pathlib.Path('/var/cache/setup-dist/status-files/disclaimer.done')
-               if not os.path.exists(file_path):
-                  file_path.touch(exist_ok=True)
+                file_path = pathlib.Path('/var/cache/setup-dist/status-files/disclaimer.done')
+                if not os.path.exists(file_path):
+                    file_path.touch(exist_ok=True)
 
             if self.env == 'workstation':
-               self.finish_page.icon.setPixmap(QtGui.QPixmap( \
-               '/usr/share/icons/oxygen/48x48/status/task-complete.png'))
-               self.finish_page.text.setText(self._('finish_page'))
+                self.finish_page.icon.setPixmap(QtGui.QPixmap( \
+                '/usr/share/icons/oxygen/48x48/status/task-complete.png'))
+                if Common.in_sudoless_mode:
+                    self.finish_page.text.setText(self._('finish_page_sudoless'))
+                else:
+                    self.finish_page.text.setText(self._('finish_page'))
 
     def back_button_clicked(self):
         if Common.show_disclaimer:
@@ -329,55 +353,55 @@ class setup_wizard_dist(QtWidgets.QWizard):
 
 
 def signal_handler(sig, frame):
-   sys.exit(128 + sig)
+    sys.exit(128 + sig)
 
 
 def main():
-   if os.geteuid() == 0:
-      print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py ERROR: Do not run with sudo / as root!')
-      sys.exit(1)
+    if os.geteuid() == 0:
+        print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py ERROR: Do not run with sudo / as root!')
+        sys.exit(1)
 
-   app = QtWidgets.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
 
-   signal.signal(signal.SIGINT, signal_handler)
-   signal.signal(signal.SIGTERM, signal_handler)
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
 
-   timer = QtCore.QTimer()
-   timer.start(500)
-   timer.timeout.connect(lambda: None)
+    timer = QtCore.QTimer()
+    timer.start(500)
+    timer.timeout.connect(lambda: None)
 
-   wizard_finished_normally = False
+    wizard_finished_normally = False
 
-   if len(Common.wizard_steps) == 0:
-      print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: No page needs showing.')
-      wizard_finished_normally = True
-   else:
-      wizard = setup_wizard_dist()
-      wizard.exec_()
-      wizard_finished_normally = wizard.finished_normally
+    if len(Common.wizard_steps) == 0:
+        print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: No page needs showing.')
+        wizard_finished_normally = True
+    else:
+        wizard = setup_wizard_dist()
+        wizard.exec_()
+        wizard_finished_normally = wizard.finished_normally
 
-   if Common.show_disclaimer:
-      if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
-         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /usr/share/whonix-setup-wizard/status-files/disclaimer.skip exists.')
-      elif os.path.isfile('/var/cache/whonix-setup-wizard/status-files/disclaimer.done'):
-         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /var/cache/whonix-setup-wizard/status-files/disclaimer.done exists.')
-      elif os.path.isfile('/usr/share/setup-dist/status-files/disclaimer.skip'):
-         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /usr/share/setup-dist/status-files/disclaimer.skip exists.')
-      elif os.path.isfile('/var/cache/setup-dist/status-files/disclaimer.done'):
-         print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /var/cache/setup-dist/status-files/disclaimer.done exists.')
-      else:
-         declined_legal()
+    if Common.show_disclaimer:
+        if os.path.isfile('/usr/share/whonix-setup-wizard/status-files/disclaimer.skip'):
+            print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /usr/share/whonix-setup-wizard/status-files/disclaimer.skip exists.')
+        elif os.path.isfile('/var/cache/whonix-setup-wizard/status-files/disclaimer.done'):
+            print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /var/cache/whonix-setup-wizard/status-files/disclaimer.done exists.')
+        elif os.path.isfile('/usr/share/setup-dist/status-files/disclaimer.skip'):
+            print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /usr/share/setup-dist/status-files/disclaimer.skip exists.')
+        elif os.path.isfile('/var/cache/setup-dist/status-files/disclaimer.done'):
+            print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: /var/cache/setup-dist/status-files/disclaimer.done exists.')
+        else:
+            declined_legal()
 
-   if not wizard_finished_normally:
-      print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: Canceled.')
-      sys.exit(0)
+    if not wizard_finished_normally:
+        print('usr/lib/python3/dist-packages/setup_wizard_dist/setup_wizard_dist.py INFO: Canceled.')
+        sys.exit(0)
 
-   # if Common.environment == 'gateway':
-   #    command = ['anon-connection-wizard']
-   #    exit_code = call(command)
+    # if Common.environment == 'gateway':
+    #    command = ['anon-connection-wizard']
+    #    exit_code = call(command)
 
-   command = ['env', 'started_by_setup_wizard_dist=true', '/usr/libexec/setup-dist/ft_m_end']
-   exit_code = call(command)
+    command = ['env', 'started_by_setup_wizard_dist=true', '/usr/libexec/setup-dist/ft_m_end']
+    exit_code = call(command)
 
 if __name__ == "__main__":
     main()
