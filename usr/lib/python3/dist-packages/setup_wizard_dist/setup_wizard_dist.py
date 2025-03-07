@@ -153,6 +153,7 @@ class FinishPage(QtWidgets.QWizardPage):
 
         self.icon = QtWidgets.QLabel(self)
         self.text = QtWidgets.QTextBrowser(self)
+        self.text.setOpenExternalLinks(True)
 
         self.layout = QtWidgets.QGridLayout()
         self.setupUi()
