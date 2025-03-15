@@ -1,3 +1,22 @@
+commit 5035bbf4c0dc3b774a332c7044ed8f288c3822b9
+Merge: 60a110b 40ce9c2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Mar 15 06:42:38 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/autologin'
+
+commit 40ce9c2ce415c0ca48f3d6fecb2427a058c39439
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Mar 6 21:35:52 2025 -0600
+
+    Add autologin documentation, make links actually work rather than just wiping the text view when clicked
+
+commit 60a110bfa9c4d750baaa22cf2fa8e5932e80efa9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 6 17:41:57 2025 +0000
+
+    bumped changelog version
+
 commit b37304988cdb9baee535567fa7abbe12973dda4f
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Feb 6 12:37:29 2025 -0500
