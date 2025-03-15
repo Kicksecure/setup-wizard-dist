@@ -88,7 +88,9 @@ setup-dist:
           <ul>
             <li><b>Default username:</b> <u><code>user</code></u></li>
             <li><b>Default password:</b> No password required. (Passwordless login.)</li>
+            <li><b>Autologin:</b> Enabled by default for user <u><code>user</code></u></li>
           </ul>
+          <p>You can set a password and disable autologin by booting into "<code>PERSISTENT mode SYSMAINT</code>". See <a href="https://www.kicksecure.com/wiki/Sysmaint">https://www.kicksecure.com/wiki/Sysmaint</a> for more information.</p>
           <p>Click the "OK" button to run <code>systemcheck</code>.</p>
 
         first_use_notice:
