@@ -65,7 +65,7 @@ if os.path.exists('/run/qubes/this-is-templatevm'):
 if os.path.exists('/usr/share/qubes/marker-vm'):
     ## Qubes detected.
     if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
-
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway detected, therefore continuing.')
     else:
         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
         sys.exit()
