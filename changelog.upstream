@@ -1,3 +1,75 @@
+commit 0bd48e680f74873615982bab56dfec0f1b6f66f3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:42:42 2025 -0400
+
+    output
+
+commit ecc56979860ade417f028ea25a663968d2d0c0d1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:41:57 2025 -0400
+
+    cleanup
+
+commit 551cf7932c232039493f3efa20f3a135dc8dfa8f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:30:38 2025 -0400
+
+    fix
+
+commit 75603532453a98d507700d8e00f6e62a60884e64
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:29:14 2025 -0400
+
+    comment
+
+commit a3e5261fae507e662a49439d165276ffa01ea30a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:27:16 2025 -0400
+
+    do not start in live mode
+
+commit e256f82f417c8704c228601517786cbe1399187e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:22:51 2025 -0400
+
+    cleanup
+
+commit ddd46e099e5f68aa384895c94d2baff2e4c1dbea
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:21:56 2025 -0400
+
+    identd style
+
+commit 68927e90bfab3abd66291a4198cf6c812877ea22
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:21:16 2025 -0400
+
+    cleanup
+
+commit 0112339c0f2147a18ef9eb5177aa8d9faaa2dfe3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:20:30 2025 -0400
+
+    identd style
+
+commit 2c50b55a654089e40127a550ca3859aa816db85d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:16:10 2025 -0400
+
+    comments
+
+commit 3164c02fd90aaf93d6f75476c9df2bc4e48a92e2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 06:14:46 2025 -0400
+
+    improve detection in which Kicksecure version to run setup-wizard-dist
+
+commit 02fa9711992b04a86468b8c1b1318d5f0c59bd0a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 08:53:38 2025 +0000
+
+    bumped changelog version
+
 commit affe9444696fc2cf720622d70365fa4f92cf7363
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Mar 17 04:15:39 2025 -0400
