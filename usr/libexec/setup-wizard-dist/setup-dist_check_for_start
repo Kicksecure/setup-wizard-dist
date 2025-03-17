@@ -5,6 +5,8 @@
 ## See the file COPYING for copying conditions.
 
 ## Decides to autostart setup-wizard-dist or not.
+## - Do not start in old, existing versions.
+## - If starting at all, only start at first boot.
 ## - Do not start when a done or skip file exists.
 ## - Do not start in Kicksecure-Qubes.
 ## - Do not start in Qubes-Whonix-Workstation.
