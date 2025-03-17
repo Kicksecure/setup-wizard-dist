@@ -1,3 +1,28 @@
+commit affe9444696fc2cf720622d70365fa4f92cf7363
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 04:15:39 2025 -0400
+
+    improve grub-live detection
+
+commit 3d664cc9d664914fa6fff07020bfa491742f9269
+Merge: ef4cbc3 2a47963
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 02:59:47 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/autologin'
+
+commit 2a47963ae240df9f940b5a9d5342adf7cdcf18c7
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Mar 16 13:42:59 2025 -0500
+
+    Enable wizard for Kicksecure, refuse to run in live mode
+
+commit ef4cbc316f59b0e38faf54ede664d28e9a5787b4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Mar 15 10:52:40 2025 +0000
+
+    bumped changelog version
+
 commit 5035bbf4c0dc3b774a332c7044ed8f288c3822b9
 Merge: 60a110b 40ce9c2
 Author: Patrick Schleizer <adrelanos@whonix.org>
