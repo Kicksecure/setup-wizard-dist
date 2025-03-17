@@ -23,14 +23,6 @@ import subprocess
 
 
 def check_live_mode_script():
-    """
-    Runs the given live-mode script and checks for:
-      - Executable permission.
-      - Non-zero exit code.
-
-    If any condition fails, it prints an error message and exits.
-    Otherwise, it prints a success message.
-    """
     script="/usr/libexec/helper-scripts/live-mode.sh"
 
     if not os.access(script, os.X_OK):
