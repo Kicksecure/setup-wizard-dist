@@ -52,9 +52,27 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
 elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
+elif os.path.exists('/etc/kicksecure_version'):
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Kicksecure detected.')
+   kicksecure_min_build_version="3:12.6-1"
+   try:
+      with open("/var/lib/dist-base-files/build_version", "r") as build_version_file:
+         build_version = build_version_file.read().strip()
+      if call(f"dpkg --compare-versions '{build_version}' ge '{kicksecure_min_build_version}'", shell = True) != 0:
+         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist not applicable for this build of Kicksecure. Exiting.')
+         sys.exit()
+   except Exception:
+      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Error checking build version, continuing.')
 else:
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway nor Whonix-Workstation detected. Exiting.')
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway, Whonix-Workstation, nor Kicksecure detected. Exiting.')
    sys.exit()
+
+with open("/proc/cmdline", "r") as kernel_cmdline_file:
+    kernel_cmdline = kernel_cmdline_file.read()
+
+if "rootovl" in kernel_cmdline:
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in LIVE mode USER. Exiting.')
+    sys.exit()
 
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
