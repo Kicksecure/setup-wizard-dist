@@ -17,7 +17,38 @@
 import sys
 import os
 import time
-from subprocess import call
+import subprocess
+
+
+def check_live_mode_script():
+  """
+  Runs the given live-mode script and checks for:
+    - Executable permission.
+    - Non-zero exit code.
+
+  If any condition fails, it prints an error message and exits.
+  Otherwise, it prints a success message.
+  """
+  script="/usr/libexec/helper-scripts/live-mode.sh"
+
+  if not os.access(script, os.X_OK):
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: "/usr/libexec/helper-scripts/live-mode.sh" not execrable.')
+    return False
+
+  result = subprocess.run([script],
+                          stdout=subprocess.PIPE,
+                          stderr=subprocess.PIPE,
+                          text=True)
+
+  if result.returncode != 0:
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: non-zero exit code by "/usr/libexec/helper-scripts/live-mode.sh".')
+    return False
+
+  if "live_status_detected_live_mode_environment_machine='grub-live'" in result.stdout:
+    return True
+
+  return False
+
 
 if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
    os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
@@ -70,8 +101,8 @@ else:
 with open("/proc/cmdline", "r") as kernel_cmdline_file:
     kernel_cmdline = kernel_cmdline_file.read()
 
-if "rootovl" in kernel_cmdline:
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in LIVE mode USER. Exiting.')
+if check_live_mode_script():
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in LIVE mode USER using grub-live. Exiting.')
     sys.exit()
 
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
