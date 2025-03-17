@@ -109,9 +109,6 @@ else:
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway, Whonix-Workstation, nor Kicksecure detected. Exiting.')
     sys.exit()
 
-with open("/proc/cmdline", "r") as kernel_cmdline_file:
-    kernel_cmdline = kernel_cmdline_file.read()
-
 if check_live_mode_script():
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in LIVE mode USER using grub-live. Exiting.')
     sys.exit()
