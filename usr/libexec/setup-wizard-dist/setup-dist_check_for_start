@@ -23,33 +23,33 @@ import subprocess
 
 
 def check_live_mode_script():
-  """
-  Runs the given live-mode script and checks for:
-    - Executable permission.
-    - Non-zero exit code.
+    """
+    Runs the given live-mode script and checks for:
+      - Executable permission.
+      - Non-zero exit code.
 
-  If any condition fails, it prints an error message and exits.
-  Otherwise, it prints a success message.
-  """
-  script="/usr/libexec/helper-scripts/live-mode.sh"
+    If any condition fails, it prints an error message and exits.
+    Otherwise, it prints a success message.
+    """
+    script="/usr/libexec/helper-scripts/live-mode.sh"
 
-  if not os.access(script, os.X_OK):
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: "/usr/libexec/helper-scripts/live-mode.sh" not execrable.')
+    if not os.access(script, os.X_OK):
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: "/usr/libexec/helper-scripts/live-mode.sh" not execrable.')
+        return False
+
+    result = subprocess.run([script],
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            text=True)
+
+    if result.returncode != 0:
+      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: non-zero exit code by "/usr/libexec/helper-scripts/live-mode.sh".')
+      return False
+
+    if "live_status_detected_live_mode_environment_machine='grub-live'" in result.stdout:
+      return True
+
     return False
-
-  result = subprocess.run([script],
-                          stdout=subprocess.PIPE,
-                          stderr=subprocess.PIPE,
-                          text=True)
-
-  if result.returncode != 0:
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: non-zero exit code by "/usr/libexec/helper-scripts/live-mode.sh".')
-    return False
-
-  if "live_status_detected_live_mode_environment_machine='grub-live'" in result.stdout:
-    return True
-
-  return False
 
 
 if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
@@ -66,48 +66,48 @@ if os.path.exists('/run/qubes/this-is-templatevm'):
    sys.exit()
 
 if os.path.exists('/usr/share/qubes/marker-vm'):
-   ## Qubes detected.
-   if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
-      ## Display alert that 'whonix-tor-disable' service flag is set and it will need to
-      ## to manually unset if user wants to be able to boot with Tor enabled.
-      ## TODO: Don't depend on qubes-whonix package / 'alert' script by qubes-whonix package.
-      ##       Abolish 'alert' script. Merge into systemcheck and/or anon-connection-wizard.
-      ##       https://phabricator.whonix.org/T656
-      if os.path.exists('/run/qubes-service/whonix-tor-disable'):
-         command = '/usr/lib/qubes-whonix/alert tor-disabled /usr/lib/qubes-whonix/messages.yaml'
-         call(command, shell = True)
-         sys.exit()
-   else:
-      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
-      sys.exit()
+    ## Qubes detected.
+    if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
+        ## Display alert that 'whonix-tor-disable' service flag is set and it will need to
+        ## to manually unset if user wants to be able to boot with Tor enabled.
+        ## TODO: Don't depend on qubes-whonix package / 'alert' script by qubes-whonix package.
+        ##       Abolish 'alert' script. Merge into systemcheck and/or anon-connection-wizard.
+        ##       https://phabricator.whonix.org/T656
+        if os.path.exists('/run/qubes-service/whonix-tor-disable'):
+            command = '/usr/lib/qubes-whonix/alert tor-disabled /usr/lib/qubes-whonix/messages.yaml'
+            call(command, shell = True)
+            sys.exit()
+    else:
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
+        sys.exit()
 
 if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
 elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
 elif os.path.exists('/etc/kicksecure_version'):
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Kicksecure detected.')
-   minimum_package_version="3:11.7-1"
-   try:
-      command = "zless /usr/share/doc/setup-wizard-dist/changelog.Debian.gz | dpkg-parsechangelog -l- -SVersion"
-      print("Executing command:")
-      print(command)
-      result = subprocess.run(command, shell=True, capture_output=True, text=True)
-      actual_package_version = result.stdout.strip()
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Kicksecure detected.')
+    minimum_package_version="3:11.7-1"
+    try:
+        command = "zless /usr/share/doc/setup-wizard-dist/changelog.Debian.gz | dpkg-parsechangelog -l- -SVersion"
+        print("Executing command:")
+        print(command)
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        actual_package_version = result.stdout.strip()
 
-      command = f"dpkg --compare-versions '{actual_package_version}' ge '{minimum_package_version}'"
-      print("Executing command:")
-      print(command)
+        command = f"dpkg --compare-versions '{actual_package_version}' ge '{minimum_package_version}'"
+        print("Executing command:")
+        print(command)
 
-      if subprocess.call(command, shell = True) != 0:
-         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist not applicable for this build of Kicksecure. Exiting.')
-         sys.exit()
-      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist is applicable for this build of Kicksecure, continuing.')
-   except Exception:
-      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Error checking build version, continuing.')
+        if subprocess.call(command, shell = True) != 0:
+            print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist not applicable for this build of Kicksecure. Exiting.')
+            sys.exit()
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist is applicable for this build of Kicksecure, continuing.')
+    except Exception:
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Error checking build version, continuing.')
 else:
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway, Whonix-Workstation, nor Kicksecure detected. Exiting.')
-   sys.exit()
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway, Whonix-Workstation, nor Kicksecure detected. Exiting.')
+    sys.exit()
 
 with open("/proc/cmdline", "r") as kernel_cmdline_file:
     kernel_cmdline = kernel_cmdline_file.read()
