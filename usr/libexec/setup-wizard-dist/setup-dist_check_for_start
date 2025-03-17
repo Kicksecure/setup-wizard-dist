@@ -41,7 +41,8 @@ def check_live_mode_script():
 
     #if "live_status_detected_live_mode_environment_machine='grub-live'" in result.stdout:
         #return True
-
+    #if "live_status_detected_live_mode_environment_machine='iso-live'" in result.stdout:
+        #return True
     if "live_status_detected='true'" in result.stdout:
         return True
 
