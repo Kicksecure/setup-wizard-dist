@@ -43,11 +43,11 @@ def check_live_mode_script():
                             text=True)
 
     if result.returncode != 0:
-      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: non-zero exit code by "/usr/libexec/helper-scripts/live-mode.sh".')
-      return False
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: ERROR: non-zero exit code by "/usr/libexec/helper-scripts/live-mode.sh".')
+        return False
 
     if "live_status_detected_live_mode_environment_machine='grub-live'" in result.stdout:
-      return True
+        return True
 
     return False
 
