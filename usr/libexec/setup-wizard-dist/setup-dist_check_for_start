@@ -72,7 +72,7 @@ if os.path.exists('/usr/share/qubes/marker-vm'):
         ##       https://phabricator.whonix.org/T656
         if os.path.exists('/run/qubes-service/whonix-tor-disable'):
             command = '/usr/lib/qubes-whonix/alert tor-disabled /usr/lib/qubes-whonix/messages.yaml'
-            call(command, shell = True)
+            subprocess.call(command, shell = True)
             sys.exit()
     else:
         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
