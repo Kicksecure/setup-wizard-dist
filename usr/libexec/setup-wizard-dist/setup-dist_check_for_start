@@ -85,13 +85,22 @@ elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
 elif os.path.exists('/etc/kicksecure_version'):
    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Kicksecure detected.')
-   kicksecure_min_build_version="3:12.6-1"
+   minimum_package_version="3:11.7-1"
    try:
-      with open("/var/lib/dist-base-files/build_version", "r") as build_version_file:
-         build_version = build_version_file.read().strip()
-      if call(f"dpkg --compare-versions '{build_version}' ge '{kicksecure_min_build_version}'", shell = True) != 0:
+      command = "zless /usr/share/doc/setup-wizard-dist/changelog.Debian.gz | dpkg-parsechangelog -l- -SVersion"
+      print("Executing command:")
+      print(command)
+      result = subprocess.run(command, shell=True, capture_output=True, text=True)
+      actual_package_version = result.stdout.strip()
+
+      command = f"dpkg --compare-versions '{actual_package_version}' ge '{minimum_package_version}'"
+      print("Executing command:")
+      print(command)
+
+      if subprocess.call(command, shell = True) != 0:
          print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist not applicable for this build of Kicksecure. Exiting.')
          sys.exit()
+      print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist is applicable for this build of Kicksecure, continuing.')
    except Exception:
       print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Error checking build version, continuing.')
 else:
@@ -107,4 +116,4 @@ if check_live_mode_script():
 
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
-call(command, shell=True)
+subprocess.call(command, shell=True)
