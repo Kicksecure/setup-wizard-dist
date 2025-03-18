@@ -98,6 +98,10 @@ elif os.path.exists('/etc/kicksecure_version'):
             sys.exit()
 
         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist is applicable for this build of Kicksecure, continuing.')
+
+        ## TODO
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Actually not. Disable until fixed. Existing. TODO')
+        sys.exit()
     except Exception:
         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Error checking build version, continuing.')
 else:
