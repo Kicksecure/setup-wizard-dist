@@ -1,3 +1,21 @@
+commit 001fad6a4da1c8a415eb8acabe321e3b6b733ad6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 18 07:42:24 2025 -0400
+
+    disable until fixed in Kicksecure
+
+commit 748f2043eeb0729484508e6cc0bf23213932ee64
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 18 07:40:25 2025 -0400
+
+    improvements
+
+commit c13052b576a8339952103624547db4b2ea3b7134
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Mar 17 10:46:08 2025 +0000
+
+    bumped changelog version
+
 commit 0bd48e680f74873615982bab56dfec0f1b6f66f3
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Mar 17 06:42:42 2025 -0400
