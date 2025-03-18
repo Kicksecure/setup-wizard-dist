@@ -84,13 +84,19 @@ elif os.path.exists('/etc/kicksecure_version'):
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
         actual_package_version = result.stdout.strip()
 
+        print(f"actual_package_version : {actual_package_version}")
+        print(f"minimum_package_version: {minimum_package_version}")
+        print("dpkg --compare-versions actual_package_version ge minimum_package_version")
         command = f"dpkg --compare-versions '{actual_package_version}' ge '{minimum_package_version}'"
-        print("Executing command:")
         print(command)
 
-        if subprocess.call(command, shell = True) != 0:
+        result = subprocess.run(command, shell = True)
+        print(result.returncode)
+
+        if result.returncode == 0:
             print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist not applicable for this build of Kicksecure. Exiting.')
             sys.exit()
+
         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist is applicable for this build of Kicksecure, continuing.')
     except Exception:
         print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Error checking build version, continuing.')
