@@ -12,7 +12,7 @@
 ## - Do not start in Kicksecure-Qubes.
 ## - Do not start in Qubes-Whonix-Workstation.
 ## - Do not start in a Qubes Template.
-## - Start in Kicksecure (non-Qubes).
+## - Start in Kicksecure (non-Qubes) in version 17.3.5.2 and above.
 ## - Start in Qubes-Whonix-Gateway.
 ## - Start in Non-Qubes-Whonix-Gateway.
 ## - Start in Non-Qubes-Whonix-Workstation.
