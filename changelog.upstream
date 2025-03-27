@@ -1,3 +1,21 @@
+commit ef3775be3580400a03fa222eb90f662a1f5edb7c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 27 05:01:35 2025 -0400
+
+    comment
+
+commit f9225813424170e8bad8b890ed1c27640be52753
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 27 04:57:41 2025 -0400
+
+    simplify Kicksecure version detection code
+
+commit 6b814bdc14db33646591584d16697a2698160758
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Mar 18 11:42:43 2025 +0000
+
+    bumped changelog version
+
 commit 001fad6a4da1c8a415eb8acabe321e3b6b733ad6
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Mar 18 07:42:24 2025 -0400
