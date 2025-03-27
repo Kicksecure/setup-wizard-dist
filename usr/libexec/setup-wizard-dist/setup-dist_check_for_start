@@ -74,38 +74,12 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
 elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
-elif os.path.exists('/etc/kicksecure_version'):
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Kicksecure detected.')
-    minimum_package_version="3:11.7-1"
-    try:
-        command = "zless /usr/share/doc/setup-wizard-dist/changelog.Debian.gz | dpkg-parsechangelog -l- -SVersion"
-        print("Executing command:")
-        print(command)
-        result = subprocess.run(command, shell=True, capture_output=True, text=True)
-        actual_package_version = result.stdout.strip()
-
-        print(f"actual_package_version : {actual_package_version}")
-        print(f"minimum_package_version: {minimum_package_version}")
-        print("dpkg --compare-versions actual_package_version ge minimum_package_version")
-        command = f"dpkg --compare-versions '{actual_package_version}' ge '{minimum_package_version}'"
-        print(command)
-
-        result = subprocess.run(command, shell = True)
-        print(result.returncode)
-
-        if result.returncode == 0:
-            print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist not applicable for this build of Kicksecure. Exiting.')
-            sys.exit()
-
-        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-wizard-dist is applicable for this build of Kicksecure, continuing.')
-
-        ## TODO
-        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Actually not. Disable until fixed. Existing. TODO')
-        sys.exit()
-    except Exception:
-        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Error checking build version, continuing.')
+elif os.path.exists('/var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-frist-start-maybe'):
+    ## File /var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-frist-start-maybe is created by a chroot-script and
+    ## exists since Non-Qubes Kicksecure version 17.3.5.2.
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Non-Qubes Kicksecure version 17.3.5.2 or above detected.')
 else:
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway, Whonix-Workstation, nor Kicksecure detected. Exiting.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway, Whonix-Workstation, nor high enough Non-Qubes Kicksecure version detected. Exiting.')
     sys.exit()
 
 if check_live_mode_script():
