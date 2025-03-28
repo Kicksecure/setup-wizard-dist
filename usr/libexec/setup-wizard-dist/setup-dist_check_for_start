@@ -74,8 +74,8 @@ if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
 elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
-elif os.path.exists('/var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-frist-start-maybe'):
-    ## File /var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-frist-start-maybe is created by a chroot-script and
+elif os.path.exists('/var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-first-start-maybe'):
+    ## File /var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-first-start-maybe is created by a chroot-script and
     ## exists since Non-Qubes Kicksecure version 17.3.5.2.
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Non-Qubes Kicksecure version 17.3.5.2 or above detected.')
 else:
