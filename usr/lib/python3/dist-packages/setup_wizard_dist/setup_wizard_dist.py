@@ -182,6 +182,11 @@ class setup_wizard_dist(QtWidgets.QWizard):
         self.steps = Common.wizard_steps
         self.env = Common.environment
 
+        self.user_sysmaint_split_installed = False
+        command = ['/usr/bin/bash', '-c', 'source /usr/libexec/helper-scripts/package_installed_check.bsh; pkg_installed user-sysmaint-split']
+        if call(command) == 0:
+            self.user_sysmaint_split_installed = True
+
         if Common.show_disclaimer:
             self.disclaimer_1 = DisclaimerPage1()
             self.addPage(self.disclaimer_1)
@@ -198,6 +203,16 @@ class setup_wizard_dist(QtWidgets.QWizard):
         if result == QtWidgets.QWizard.Accepted:
             self.finished_normally = True
         super(setup_wizard_dist, self).done(result)
+
+    def get_finish_page_text(self):
+        return (
+            self._('finish_page_start')
+            + (
+                self._('finish_page_middle_sysmaint') if self.user_sysmaint_split_installed
+                else self._('finish_page_middle_no_sysmaint')
+            )
+            + self._('finish_page_end')
+        )
 
     def setupUi(self):
         self.setWindowIcon(QtGui.QIcon("/usr/share/icons/gnome/24x24/status/info.png"))
@@ -236,7 +251,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
         self.setPalette(palette)
 
         self.finish_page.icon.setPixmap(QtGui.QPixmap('/usr/share/icons/oxygen/48x48/status/task-complete.png'))
-        self.finish_page.text.setText(self._('finish_page'))
+        self.finish_page.text.setText(self.get_finish_page_text())
 
         disclaimer_message = ""
         disclaimer_message += self._('disclaimer_1')
@@ -319,7 +334,7 @@ class setup_wizard_dist(QtWidgets.QWizard):
             if self.env == 'workstation':
                 self.finish_page.icon.setPixmap(QtGui.QPixmap( \
                 '/usr/share/icons/oxygen/48x48/status/task-complete.png'))
-                self.finish_page.text.setText(self._('finish_page'))
+                self.finish_page.text.setText(self.get_finish_page_text())
 
     def back_button_clicked(self):
         if Common.show_disclaimer:

@@ -82,7 +82,7 @@ setup-dist:
         accept: Understood / Verstanden
         reject: Not understood / Nicht verstanden
 
-        finish_page: |
+        finish_page_start: |
           <p>The <code>setup-wizard-dist</code> has been successfully completed.</p>
           <p>Please note the following default credentials:</p>
           <ul>
@@ -90,7 +90,14 @@ setup-dist:
             <li><b>Default password:</b> No password required. (Passwordless login.)</li>
             <li><b>Autologin:</b> Enabled by default for user <u><code>user</code></u></li>
           </ul>
+
+        finish_page_middle_sysmaint: |
           <p>You can set a password and disable autologin by booting into "<code>PERSISTENT mode SYSMAINT</code>". See <a href="https://www.kicksecure.com/wiki/Sysmaint">https://www.kicksecure.com/wiki/Sysmaint</a> for more information.</p>
+
+        finish_page_middle_no_sysmaint: |
+          <p>You can set a password and disable autologin by using the System Maintenance Panel application. See <a href="https://www.kicksecure.com/wiki/System_Maintenance_Panel">https://www.kicksecure.com/wiki/System_Maintenance_Panel</a> for more information.</p>
+
+        finish_page_end: |
           <p>Click the "OK" button to run <code>systemcheck</code>.</p>
 
         first_use_notice:
