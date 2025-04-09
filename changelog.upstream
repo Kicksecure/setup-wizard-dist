@@ -1,3 +1,22 @@
+commit 90ab7a980899e92ddfadc647aaf31f094e3ca552
+Merge: 78774f3 2df7da1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 9 11:03:00 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/no-assume-sysmaint'
+
+commit 2df7da1a3ceee5e9cdd7d78095f370c46f836599
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Apr 8 19:15:00 2025 -0500
+
+    Don't assume user-sysmaint-split is installed
+
+commit 78774f394c82dda556f34f20a759c5b17f27c056
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Mar 28 14:45:35 2025 +0000
+
+    bumped changelog version
+
 commit 5d9057ae146f578cdf364fcc83fa090b40cc3d61
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Mar 28 09:13:06 2025 -0400
