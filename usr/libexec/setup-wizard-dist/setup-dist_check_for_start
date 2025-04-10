@@ -83,7 +83,7 @@ else:
     sys.exit()
 
 if check_live_mode_script():
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in LIVE mode USER using grub-live. Exiting.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in "LIVE Mode - USER Session" using grub-live. Exiting.')
     sys.exit()
 
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')

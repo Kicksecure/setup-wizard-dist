@@ -92,7 +92,7 @@ setup-dist:
           </ul>
 
         finish_page_middle_sysmaint: |
-          <p>You can set a password and disable autologin by booting into "<code>PERSISTENT mode SYSMAINT</code>". See <a href="https://www.kicksecure.com/wiki/Sysmaint">https://www.kicksecure.com/wiki/Sysmaint</a> for more information.</p>
+          <p>You can set a password and disable autologin by booting into "<code>PERSISTENT Mode - SYSMAINT Session</code>". See <a href="https://www.kicksecure.com/wiki/Sysmaint">https://www.kicksecure.com/wiki/Sysmaint</a> for more information.</p>
 
         finish_page_middle_no_sysmaint: |
           <p>You can set a password and disable autologin by using the System Maintenance Panel application. See <a href="https://www.kicksecure.com/wiki/System_Maintenance_Panel">https://www.kicksecure.com/wiki/System_Maintenance_Panel</a> for more information.</p>
