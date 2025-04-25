@@ -1,3 +1,44 @@
+commit 51e5ddefb57c94f091590ab454f222afcdb6bb10
+Merge: d47cbc4 764eeca
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Apr 25 07:19:11 2025 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit 764eeca9e56fbea163e95dd422bc8d5bdb305565
+Merge: d47cbc4 03ed73a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Apr 25 07:18:28 2025 -0400
+
+    Merge pull request #1 from JeremyRand/distutils
+    
+    Remove `distutils` dependency
+
+commit 03ed73a7c2bb55def42357dd3c6f35da489c9e54
+Author: Jeremy Rand <jeremyrand@danwin1210.de>
+Date:   Fri Apr 25 04:32:19 2025 +0000
+
+    Remove distutils dependency
+    
+    distutils was removed in Python 3.12, per deprecation in PEP
+    632. It is not present in Debian Trixie and higher.
+    
+    Removing distutils from Kicksecure dependencies fixes issues
+    when distro-morphing Debian Trixie and higher to Kicksecure. It
+    is also necessary for installing Kicksecure on ports-only
+    architectures such as ppc64.
+    
+    As best I can tell, setup-wizard-dist is not actually using
+    distutils anywhere, so no code changes or new dependencies
+    should be necessary. If I am mistaken on this,
+    python3-setuptools is supposedly a drop-in replacement.
+
+commit d47cbc4a068a23108b61b2e9d1f1cd3007d895f6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 10 11:38:42 2025 +0000
+
+    bumped changelog version
+
 commit 3c35ea51247615d72c0f23a351397eed10fe8736
 Merge: 2c3c9b4 f3540f9
 Author: Patrick Schleizer <adrelanos@whonix.org>
