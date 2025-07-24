@@ -1,3 +1,22 @@
+commit 523a737136f31ebb1172a064c72d30c41d95206e
+Merge: 9838c92 e96a67b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jul 24 02:23:02 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/browser-choice'
+
+commit e96a67be759c36485a06de446d602e4b107bb3af
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Jul 22 21:06:41 2025 -0500
+
+    Add mention of browser-choice for Kicksecure, fix outdated boot mode string
+
+commit 9838c92b8a0e23e3aa481e4cbb291f1fc13a900b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 7 06:42:09 2025 +0000
+
+    bumped changelog version
+
 commit 9546447b0335f0b111c5ddb7e26eced9683c2063
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 7 02:36:44 2025 -0400
