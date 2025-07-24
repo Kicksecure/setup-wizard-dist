@@ -91,8 +91,14 @@ setup-dist:
             <li><b>Autologin:</b> Enabled by default for user <u><code>user</code></u></li>
           </ul>
 
+        finish_page_middle_browser_choice_sysmaint: |
+          <p><u>No browser is installed by default.</u> You may install one of several popular, open-source browsers by booting into "<code>PERSISTENT Mode | SYSMAINT Session</code>" and clicking "Install a Browser".</p>
+
+        finish_page_middle_browser_choice_no_sysmaint: |
+          <p><u>No browser is installed by default.</u> You may install one of several popular, open-source browsers by opening "Browser Choice" from the Start Menu.</p>
+
         finish_page_middle_sysmaint: |
-          <p>You can set a password and disable autologin by booting into "<code>PERSISTENT Mode - SYSMAINT Session</code>". See <a href="https://www.kicksecure.com/wiki/Sysmaint">https://www.kicksecure.com/wiki/Sysmaint</a> for more information.</p>
+          <p>You can set a password and disable autologin by booting into "<code>PERSISTENT Mode | SYSMAINT Session</code>". See <a href="https://www.kicksecure.com/wiki/Sysmaint">https://www.kicksecure.com/wiki/Sysmaint</a> for more information.</p>
 
         finish_page_middle_no_sysmaint: |
           <p>You can set a password and disable autologin by using the System Maintenance Panel application. See <a href="https://www.kicksecure.com/wiki/System_Maintenance_Panel">https://www.kicksecure.com/wiki/System_Maintenance_Panel</a> for more information.</p>

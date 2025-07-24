@@ -208,6 +208,11 @@ class setup_wizard_dist(QtWidgets.QWizard):
         return (
             self._('finish_page_start')
             + (
+                self._('finish_page_middle_browser_choice_sysmaint') if self.user_sysmaint_split_installed and Common.environment == "machine"
+                else self._('finish_page_middle_browser_choice_no_sysmaint') if Common.environment == "machine"
+                else ""
+            )
+            + (
                 self._('finish_page_middle_sysmaint') if self.user_sysmaint_split_installed
                 else self._('finish_page_middle_no_sysmaint')
             )
