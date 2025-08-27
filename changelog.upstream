@@ -1,8 +1,41 @@
+commit 1f8456fce9e398f440163aadafbbf59fd09cbc9a
+Merge: cd490d5 f8598d6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 27 12:34:43 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit f8598d65abec469cc4c0893df733d639bfbacfc5
+Merge: 0bb8802 cd490d5
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 26 19:20:47 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit cd490d518228ba908941a662e1ed0577846e24ed
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 26 09:17:24 2025 +0000
+
+    bumped changelog version
+
 commit cc624f198d3b12b0c1fb2664a346979c82fc42f3
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 26 05:17:22 2025 -0400
 
     re-generate man pages (generated using "genmkfile manpages")
+
+commit 0bb880276eeeb759921a48e81d9cff0b1d33000b
+Merge: c7b8eec 2d38805
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 20:12:07 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit c7b8eec32115787ecbd11a3b7662a9f73274a482
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 18:45:20 2025 -0500
+
+    Adjust keyboard layout change instructions for labwc
 
 commit 2d3880558688b582eeddb4474593212efc3cc977
 Author: Patrick Schleizer <adrelanos@whonix.org>
@@ -15,6 +48,12 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Aug 20 06:25:36 2025 -0400
 
     readme
+
+commit 2428ed5afedf4752e519ee51b1f7663fb49792a8
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 5 22:58:07 2025 -0500
+
+    Port to Trixie.
 
 commit 0c2b96a942e56d92fd877705d548925229f78977
 Author: Patrick Schleizer <adrelanos@whonix.org>
