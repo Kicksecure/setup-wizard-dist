@@ -121,4 +121,4 @@ setup-dist:
             If you want to <u>change the keyboard layout</u> from the default "us" to something else&#58;<br />
             <br />
             <b>LXQt&#58;</b>
-            <blockquote>Applications -> Accessories -> Featherpad -> type XKB_DEFAULT_LAYOUT=zz replacing zz with your language code -> save to ~/.config/labwc/environment</blockquote></p>
+            <blockquote>Applications -> Accessories -> Featherpad -> type XKB_DEFAULT_LAYOUT=zz replacing zz with your language code -> save to ~/.config/labwc/environment -> in a terminal, run <code>labwc --reconfigure</code></blockquote></p>
