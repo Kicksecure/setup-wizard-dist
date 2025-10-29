@@ -25,8 +25,8 @@ import subprocess
 
 def setup_wizard_dist_start():
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: EXECUTING: /usr/libexec/setup-wizard-dist/setup-wizard-dist')
-command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
-subprocess.call(command, shell=True)
+    command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
+    subprocess.call(command, shell=True)
 
 
 def check_live_mode_script():
