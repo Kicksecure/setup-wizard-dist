@@ -69,6 +69,7 @@ class Common:
     ## Package 'qubes-whonix' ships file: '/usr/share/setup-dist/status-files/finish_page.skip'
 
     show_finish_page = (
+                       not os.path.exists('/usr/share/qubes/marker-vm') and
                        not os.path.exists('/var/cache/whonix-setup-wizard/status-files/finish_page.done') and
                        not os.path.exists('/usr/share/whonix-setup-wizard/status-files/finish_page.skip') and
                        not os.path.exists('/var/cache/setup-dist/status-files/finish_page.done') and
