@@ -24,7 +24,7 @@ import subprocess
 
 
 def setup_wizard_dist_start():
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: EXECUTING: /usr/libexec/setup-wizard-dist/setup-wizard-dist')
 command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
 subprocess.call(command, shell=True)
 
@@ -61,35 +61,35 @@ if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
    os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done') or
    os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
 ):
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: setup-dist done file exists. Exiting.')
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: setup-dist done file exists. Exiting.')
    sys.exit(0)
 
 if os.path.exists('/run/qubes/this-is-templatevm'):
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: File /run/qubes/this-is-templatevm exists. Exiting.')
+   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: File /run/qubes/this-is-templatevm exists. Exiting.')
    sys.exit(0)
 
 if os.path.exists('/usr/share/qubes/marker-vm'):
     ## Qubes detected.
     if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
-        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway detected, therefore continuing.')
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: Qubes-Whonix-Gateway detected, therefore continuing.')
     else:
-        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
+        print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: Qubes-Whonix-Gateway not detected. Therefore do not start setup-wizard-dist by default. Exiting.')
         sys.exit(0)
 
 if os.path.exists('/usr/share/anon-gw-base-files/gateway'):
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Gateway detected.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: Whonix-Gateway detected.')
 elif os.path.exists('/usr/share/anon-ws-base-files/workstation'):
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Whonix-Workstation detected.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: Whonix-Workstation detected.')
 elif os.path.exists('/var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-first-start-maybe'):
     ## File /var/lib/kicksecure/status-files/kicksetup-setup-wizard-dist-first-start-maybe is created by a chroot-script and
     ## exists since Non-Qubes Kicksecure version 17.3.5.2.
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Non-Qubes Kicksecure version 17.3.5.2 or above detected.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: Non-Qubes Kicksecure version 17.3.5.2 or above detected.')
 else:
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: Neither Whonix-Gateway, Whonix-Workstation, nor high enough Non-Qubes Kicksecure version detected. Exiting.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: Neither Whonix-Gateway, Whonix-Workstation, nor high enough Non-Qubes Kicksecure version detected. Exiting.')
     sys.exit(0)
 
 if check_live_mode_script():
-    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in "LIVE Mode - USER Session" using grub-live. Exiting.')
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: System is booted in "LIVE Mode - USER Session" using grub-live. Exiting.')
     sys.exit(0)
 
 setup_wizard_dist_start()
