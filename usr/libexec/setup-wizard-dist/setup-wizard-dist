@@ -3,17 +3,17 @@
 ## Copyright (C) 2023 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
-set -x
+#set -x
 
 true "$0: START"
 
 if ! test -e /usr/bin/setup-wizard-dist ; then
-  true "/usr/bin/setup-wizard-dist does not exist!"
+  printf '%s\m' "/usr/bin/setup-wizard-dist does not exist!"
   exit 1
 fi
 
 if ! test -x /usr/bin/setup-wizard-dist ; then
-  true "/usr/bin/setup-wizard-dist not executable!"
+  printf '%s\m' "/usr/bin/setup-wizard-dist not executable!"
   exit 1
 fi
 
