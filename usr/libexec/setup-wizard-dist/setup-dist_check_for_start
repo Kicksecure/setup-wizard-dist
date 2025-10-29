@@ -57,13 +57,18 @@ def check_live_mode_script():
 
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: START')
 
-if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
-   os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
-   os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
-   os.path.exists('/var/cache/setup-dist/status-files/setup-dist.done') or
-   os.path.exists('/usr/share/setup-dist/status-files/setup-dist.skip')
-):
-   print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: setup-dist done file exists. Exiting.')
+paths = [
+   '/var/lib/whonix/do_once/whonixsetup.done',
+   '/var/cache/whonix-setup-wizard/status-files/whonixsetup.done',
+   '/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip',
+   '/var/cache/setup-dist/status-files/setup-dist.done',
+   '/usr/share/setup-dist/status-files/setup-dist.skip',
+]
+
+found = [p for p in paths if os.path.exists(p)]
+
+if found:
+   print(f"/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: setup-dist done file exists (found: {found}). Exiting.")
    sys.exit(0)
 
 if os.path.exists('/run/qubes/this-is-templatevm'):
