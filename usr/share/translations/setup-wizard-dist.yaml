@@ -88,7 +88,7 @@ setup-dist:
           <ul>
             <li><b>Default username:</b> <u><code>user</code></u></li>
             <li><b>Default password:</b> No password required. (Passwordless login.)</li>
-            <li><b>Autologin:</b> Enabled by default for user <u><code>user</code></u></li>
+            <li><b>Autologin:</b> Enabled by default for account <u><code>user</code></u></li>
           </ul>
 
         finish_page_middle_browser_choice_sysmaint: |
