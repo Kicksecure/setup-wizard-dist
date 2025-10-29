@@ -23,6 +23,12 @@ import time
 import subprocess
 
 
+def setup_wizard_dist_start():
+    print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
+command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
+subprocess.call(command, shell=True)
+
+
 def check_live_mode_script():
     script="/usr/libexec/helper-scripts/live-mode.sh"
 
@@ -86,6 +92,4 @@ if check_live_mode_script():
     print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: System is booted in "LIVE Mode - USER Session" using grub-live. Exiting.')
     sys.exit()
 
-print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: executing /usr/libexec/setup-wizard-dist/setup-wizard-dist')
-command = '/usr/libexec/setup-wizard-dist/setup-wizard-dist'
-subprocess.call(command, shell=True)
+setup_wizard_dist_start()
