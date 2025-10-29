@@ -1,3 +1,97 @@
+commit b2ff109981063bdc1392353e5f9fcfb42e86fc63
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:34:11 2025 -0400
+
+    output
+
+commit acebbd84496562fb4587713caca73f359d48ce49
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:33:44 2025 -0400
+
+    lower debugging
+
+commit a3529c056571f2e4718ddaeed55788a8c7ef38a2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:31:27 2025 -0400
+
+    autostart setup-wizard-dist in case file
+    `/etc/systemcheck.d/autostart` or
+    `/usr/local/etc/systemcheck.d/autostart`
+    exits
+    (developers feature)
+
+commit 8753c440ad3bcc2c8df45dab195f809cfd9ca8d6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:25:42 2025 -0400
+
+    skip finish page inside Qubes
+
+commit dc0551a645a145c408888cda1f1b890acd469ef1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:24:40 2025 -0400
+
+    refactoring
+
+commit 77e005e59ec03aea76d9a31a765f03361e79a41f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:21:18 2025 -0400
+
+    comment
+
+commit ef5337b959303ca0f6b46a580efe961845a18522
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:14:11 2025 -0400
+
+    output
+
+commit f70c4e696a2b0259e122cacf1eb180028ff29152
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:09:03 2025 -0400
+
+    show which done file has been found
+
+commit 8e7a28f45e2a5c51faf72cad7562a93e25619433
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:04:37 2025 -0400
+
+    fix
+
+commit 6c008876f49ffe5abe115bff5465d4c9c0930e4e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:04:07 2025 -0400
+
+    output
+
+commit 5a3ec4e9dc5d08522dd2a551722dac4bb3ce8085
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:02:54 2025 -0400
+
+    output
+
+commit fbf68400556f4ad579bdcb85f3e51c7d40ddc4f1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:01:26 2025 -0400
+
+    debugging
+
+commit 5749e22efff5c1809e1b23ea21ccc46fcb72897b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 05:00:21 2025 -0400
+
+    refactoring
+
+commit 06c7f5a3b673a05ac51eaec6338df52449acb4aa
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Oct 29 04:58:32 2025 -0400
+
+    refactoring
+
+commit 05da7d135f4a78e62cfe558484ce17e4c07bc2de
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 21:10:27 2025 +0000
+
+    bumped changelog version
+
 commit 1d5fc3f065c37b1052c72534144c002abc24cbeb
 Merge: 739add8 3395e19
 Author: Patrick Schleizer <adrelanos@whonix.org>
