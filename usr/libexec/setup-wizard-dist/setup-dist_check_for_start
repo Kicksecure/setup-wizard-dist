@@ -55,6 +55,8 @@ def check_live_mode_script():
     return False
 
 
+print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: START')
+
 if (os.path.exists('/var/lib/whonix/do_once/whonixsetup.done') or
    os.path.exists('/var/cache/whonix-setup-wizard/status-files/whonixsetup.done') or
    os.path.exists('/usr/share/whonix-setup-wizard/status-files/whonixsetup.skip') or
@@ -93,3 +95,5 @@ if check_live_mode_script():
     sys.exit(0)
 
 setup_wizard_dist_start()
+
+print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: END')
