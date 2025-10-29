@@ -57,6 +57,21 @@ def check_live_mode_script():
 
 print('/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: START')
 
+
+paths = [
+   '/etc/systemcheck.d/autostart',
+   '/usr/local/etc/systemcheck.d/autostart',
+]
+
+found = [p for p in paths if os.path.exists(p)]
+
+if found:
+   print(f"/usr/libexec/setup-wizard-dist/setup-dist_check_for_start: INFO: sytemcheck autostart file exists (found: {found}). Running setup_wizard_dist_start.")
+   ## Developers-only feature.
+   setup_wizard_dist_start()
+   sys.exit(0)
+
+
 paths = [
    '/var/lib/whonix/do_once/whonixsetup.done',
    '/var/cache/whonix-setup-wizard/status-files/whonixsetup.done',
