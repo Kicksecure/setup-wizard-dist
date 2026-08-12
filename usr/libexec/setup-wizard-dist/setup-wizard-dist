@@ -3,17 +3,22 @@
 ## Copyright (C) 2023 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
-#set -x
+set -o errexit
+set -o nounset
+set -o pipefail
+set -o errtrace
+shopt -s inherit_errexit
+shopt -s shift_verbose
 
 true "$0: START"
 
 if ! test -e /usr/bin/setup-wizard-dist ; then
-  printf '%s\m' "$0: ERROR: '/usr/bin/setup-wizard-dist' does not exist!"
+  printf '%s\n' "$0: ERROR: '/usr/bin/setup-wizard-dist' does not exist!"
   exit 1
 fi
 
 if ! test -x /usr/bin/setup-wizard-dist ; then
-  printf '%s\m' "$0: ERROR: '/usr/bin/setup-wizard-dist' not executable!"
+  printf '%s\n' "$0: ERROR: '/usr/bin/setup-wizard-dist' not executable!"
   exit 1
 fi
 
